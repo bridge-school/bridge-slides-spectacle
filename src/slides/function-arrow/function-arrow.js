@@ -1,12 +1,20 @@
+/* eslint-disable */
 import React from 'react';
 import {
-  Heading, List, ListItem,
+  CodePane,
+  Heading,
+  List,
+  ListItem,
   Slide,
-  Text,
+  SlideSet,
 } from 'spectacle';
-export class FAnatomyArrowSlide extends React.Component {
+
+/* eslint import/no-webpack-loader-syntax: off */
+import * as arrowCode from '!raw-loader!./function-arrow-example';
+
+class ArrowSlide extends React.Component {
   render() {
-    return <Slide bgColor="primary" transition={['slide']} {...this.props}>
+    return <Slide {...this.props}>
       <Heading size={1} lineHeight={1} textColor="secondary">
         Arrow Function (Bonus!)
       </Heading>
@@ -19,3 +27,22 @@ export class FAnatomyArrowSlide extends React.Component {
     </Slide>
   }
 }
+
+class ArrowSlideCode extends React.Component {
+  render() {
+    return <Slide
+      {...this.props}
+    >
+      <CodePane
+        lang="js"
+        source={arrowCode}
+        overflow="overflow"
+      />
+    </Slide>
+  }
+}
+
+export const ArrowSlideSet = [
+  ArrowSlide,
+  ArrowSlideCode
+];

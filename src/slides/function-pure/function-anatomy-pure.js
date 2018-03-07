@@ -1,13 +1,16 @@
 import React from 'react';
 import {
+  CodePane,
   Heading,
   List,
   ListItem,
   Slide,
-  Text,
 } from 'spectacle';
 
-export class FAnatomyPureSlide extends React.Component {
+/* eslint import/no-webpack-loader-syntax: off */
+import * as pureCode from '!raw-loader!./function-anatomy-pure-example';
+
+class FAnatomyPureSlide extends React.Component {
   render() {
     return <Slide bgColor="primary" transition={['slide']} {...this.props}>
       <Heading size={1} lineHeight={1} textColor="secondary">
@@ -21,3 +24,22 @@ export class FAnatomyPureSlide extends React.Component {
     </Slide>
   };
 }
+
+class FAnatomyPureCode extends React.Component {
+  render() {
+    return <Slide
+      {...this.props}
+    >
+      <CodePane
+        lang="js"
+        source={pureCode}
+        overflow="overflow"
+      />
+    </Slide>
+  }
+}
+
+export const FAnatomyPureSlideSet = [
+  FAnatomyPureSlide,
+  FAnatomyPureCode
+];

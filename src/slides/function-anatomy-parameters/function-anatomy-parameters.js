@@ -1,11 +1,15 @@
 import React from 'react';
 import {
+  CodePane,
   Heading,
   List,
   ListItem,
   Slide,
-  Text,
 } from 'spectacle';
+
+/* eslint import/no-webpack-loader-syntax: off */
+import * as paramCode from '!raw-loader!./function-anatomy-parameters-example';
+
 export class FAnatomyParamSlide extends React.Component {
   render() {
     return <Slide bgColor="primary" transition={['slide']} {...this.props}>
@@ -20,3 +24,20 @@ export class FAnatomyParamSlide extends React.Component {
     </Slide>
   }
 }
+
+class FAnatomyParameterCode extends React.Component {
+  render() {
+    return <Slide {...this.props}>
+      <CodePane
+        lang="js"
+        source={paramCode}
+        overflow="overflow"
+      />
+    </Slide>
+  }
+}
+
+export const FAnatomyParameterSlideSet = [
+  FAnatomyParamSlide,
+  FAnatomyParameterCode
+];

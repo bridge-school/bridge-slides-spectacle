@@ -1,14 +1,18 @@
 import React from 'react';
 import {
+  CodePane,
   Heading,
   List,
   ListItem,
   Slide,
 } from 'spectacle';
 
-export class FAnatomyReturnSlide extends React.Component {
+/* eslint import/no-webpack-loader-syntax: off */
+import * as returnCode from '!raw-loader!./function-anatomy-return-example';
+
+class FAnatomyReturnSlide extends React.Component {
   render() {
-    return <Slide bgColor="primary" transition={['slide']} {...this.props}>
+    return <Slide {...this.props}>
       <Heading size={1} lineHeight={1} textColor="secondary">
         Returns
       </Heading>
@@ -22,3 +26,21 @@ export class FAnatomyReturnSlide extends React.Component {
     </Slide>
   };
 }
+
+
+class FAnatomyReturnCode extends React.Component {
+  render() {
+    return <Slide {...this.props}>
+      <CodePane
+        lang="js"
+        source={returnCode}
+        overflow="overflow"
+      />
+    </Slide>
+  }
+}
+
+export const FAnatomyReturnSlideSet = [
+  FAnatomyReturnSlide,
+  FAnatomyReturnCode
+];

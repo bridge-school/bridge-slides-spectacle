@@ -4,30 +4,30 @@ import { Deck } from 'spectacle';
 import createTheme from 'spectacle/lib/themes/default';
 
 import {
-  FAnatomyArrowSlide,
   FAnatomyOverview,
-  FAnatomyParamSlide,
-  FAnatomyReturnSlide,
-  FPArrayFilterSlide,
-  FPArrayMapSlide,
+  FAnatomyParameterSlideSet,
+  FAnatomyReturnSlideSet,
+  FPFilterSlideSet,
+  FPMapSlideSet,
   FPOverviewSlide,
   ImmutabilityOverviewSlide,
   IntroSlide,
   OverviewSlide,
-  FAnatomyPureSlide,
+  FAnatomyPureSlideSet,
+  ArrowSlideSet,
 } from './slides';
 
 const slideList = [
   IntroSlide,
   OverviewSlide,
   FAnatomyOverview,
-  FAnatomyReturnSlide,
-  FAnatomyPureSlide,
-  FAnatomyArrowSlide,
-  FAnatomyParamSlide,
+    ...FAnatomyReturnSlideSet,
+    ...FAnatomyPureSlideSet,
+    ...ArrowSlideSet,
+    ...FAnatomyParameterSlideSet,
   FPOverviewSlide,
-  FPArrayFilterSlide,
-  FPArrayMapSlide,
+    ...FPFilterSlideSet,
+    ...FPMapSlideSet,
   ImmutabilityOverviewSlide
 ];
 
@@ -50,8 +50,10 @@ const theme = createTheme(
 export default class Presentation extends React.Component {
   render() {
     return (
-      <Deck theme={theme}>
-        {slideList.map((WorkshopSlide, i) => <WorkshopSlide key={'slide' + i} />)}
+      <Deck
+        transition={[]} transitionDuration={0} progress="bar"
+        theme={theme}>
+          {slideList.map((WorkshopSlide, i) => <WorkshopSlide key={'slide' + i} />)}
       </Deck>
     );
   }
