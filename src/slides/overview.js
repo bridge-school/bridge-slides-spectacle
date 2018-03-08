@@ -1,26 +1,23 @@
 import React from 'react';
-import {
-  Heading,
-  List,
-  ListItem,
-  Slide,
-  Text,
-} from 'spectacle';
+import { Heading, List, ListItem, Slide, Text } from 'spectacle';
 
 export class OverviewSlide extends React.Component {
   render() {
-    return <Slide bgColor="primary" transition={['slide']} {...this.props}>
-      <Heading size={1} fit caps lineHeight={1} textColor="secondary">
-        Agenda
-      </Heading>
+    return (
+      <Slide bgColor="primary" transition={['slide']} {...this.props}>
+        <Heading textSize="85" textColor="secondary">
+          Agenda
+        </Heading>
         <List>
-          <ListItem>Function Anatomy: Return</ListItem>
-          <ListItem>Function Anatomy: Parameters</ListItem>
-          <ListItem>Function Anatomy: Arrow (es2015)</ListItem>
-          <ListItem>Functional Programming: Filter</ListItem>
-          <ListItem>Functional Programming: Map</ListItem>
-          <ListItem>Immutability</ListItem>
+          <ListItem textSize="32" margin="0 0 1.2rem 0">
+            Function Anatomy: Return, Parameters & Arrow
+          </ListItem>
+          <ListItem textSize="32" margin="0 0 1.2rem 0">
+            Functional Programming: Filter & Map
+          </ListItem>
+          <ListItem textSize="32" margin="0 0 1.2rem 0">Immutability</ListItem>
         </List>
-    </Slide>
+      </Slide>
+    );
   }
 }

@@ -2,6 +2,7 @@
 import React from 'react';
 import { Deck } from 'spectacle';
 import createTheme from 'spectacle/lib/themes/default';
+import { colours, fontFamilies } from './theme';
 
 import {
   FAnatomyOverview,
@@ -9,7 +10,7 @@ import {
   FAnatomyReturnSlideSet,
   FPFilterSlideSet,
   FPMapSlideSet,
-  FPOverviewSlide,
+  FPOverviewSlideSet,
   ImmutabilityOverviewSlide,
   IntroSlide,
   OverviewSlide,
@@ -21,39 +22,28 @@ const slideList = [
   IntroSlide,
   OverviewSlide,
   FAnatomyOverview,
-    ...FAnatomyReturnSlideSet,
-    ...FAnatomyPureSlideSet,
-    ...ArrowSlideSet,
-    ...FAnatomyParameterSlideSet,
-  FPOverviewSlide,
-    ...FPFilterSlideSet,
-    ...FPMapSlideSet,
-  ImmutabilityOverviewSlide
+  ...FAnatomyReturnSlideSet,
+  ...FAnatomyPureSlideSet,
+  ...ArrowSlideSet,
+  ...FAnatomyParameterSlideSet,
+  ...FPOverviewSlideSet,
+  ...FPFilterSlideSet,
+  ...FPMapSlideSet,
+  ImmutabilityOverviewSlide,
 ];
 
 // Require CSS
 require('normalize.css');
 
-const theme = createTheme(
-  {
-    primary: 'white',
-    secondary: '#1F2022',
-    tertiary: '#03A9FC',
-    quartenary: '#CECECE',
-  },
-  {
-    primary: 'Montserrat',
-    secondary: 'Helvetica',
-  }
-);
+const theme = createTheme(colours, fontFamilies);
 
 export default class Presentation extends React.Component {
   render() {
     return (
-      <Deck
-        transition={[]} transitionDuration={0} progress="bar"
-        theme={theme}>
-          {slideList.map((WorkshopSlide, i) => <WorkshopSlide key={'slide' + i} />)}
+      <Deck transition={[]} transitionDuration={0} progress="bar" theme={theme}>
+        {slideList.map((WorkshopSlide, i) => (
+          <WorkshopSlide key={'slide' + i} />
+        ))}
       </Deck>
     );
   }
