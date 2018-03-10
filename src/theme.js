@@ -34,6 +34,6 @@ export const colours = {
 };
 
 export const fontFamilies = {
-  primary: "'Roboto Mono', Consolas, monaco, monospace",
-  secondary: "'Roboto Mono', Consolas, monaco, monospace",
+  primary: "'Avenir', Consolas, monaco, monospace",
+  secondary: "'Avenir', Consolas, monaco, monospace",
 };

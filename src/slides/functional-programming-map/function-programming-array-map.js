@@ -40,31 +40,6 @@ class FPMapSlide2 extends React.Component {
         </Heading>
         <List>
           <ListItem textSize="32" margin="0 0 1.5rem 0">
-            This function is fired for each item in the array - if there are 3 items it fires 3 times
-          </ListItem>
-          <List>
-            <ListItem textSize="32" margin="0 0 1.5rem 0">
-              first time it fires the first parameter will be the first item in the list
-            </ListItem>
-            <ListItem textSize="32" margin="0 0 1.5rem 0">
-              second time it fires the first parameter will bbe the second item in the list
-            </ListItem>
-          </List>
-        </List>
-      </Slide>
-    );
-  }
-}
-
-class FPMapSlide3 extends React.Component {
-  render() {
-    return (
-      <Slide bgColor="primary" transition={['slide']} {...this.props}>
-        <Heading textSize="75">
-          Array Map
-        </Heading>
-        <List>
-          <ListItem textSize="32" margin="0 0 1.5rem 0">
             The function should return whatever we want to have in the new array at the same index as the old array
           </ListItem>
           <ListItem textSize="32" margin="0 0 1.5rem 0">
@@ -94,4 +69,4 @@ class FPMapCode extends React.Component {
   }
 }
 
-export const FPMapSlideSet = [FPMapSlide1, FPMapSlide2, FPMapSlide3, FPMapCode];
+export const FPMapSlideSet = [FPMapSlide1, FPMapSlide2, FPMapCode];
