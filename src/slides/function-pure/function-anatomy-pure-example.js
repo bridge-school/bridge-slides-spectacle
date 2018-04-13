@@ -1,15 +1,13 @@
-
 const numA = 5;
 const numB = 3;
 
-
-// Impure
+// impure
 function addTwo() {
   console.log(numA, numB);
 }
 addTwo();
 
-//pure
+// pure
 function add2(num1, num2) {
   return num1 + num2;
 }
