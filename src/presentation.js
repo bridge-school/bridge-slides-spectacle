@@ -16,6 +16,7 @@ import {
   OverviewSlide,
   FAnatomyPureSlideSet,
   ArrowSlideSet,
+  PromisesSlideSet,
 } from './slides';
 
 const slideList = [
@@ -30,6 +31,7 @@ const slideList = [
   ...FPFilterSlideSet,
   ...FPMapSlideSet,
   ImmutabilityOverviewSlide,
+  ...PromisesSlideSet
 ];
 
 // Require CSS

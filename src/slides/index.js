@@ -1,3 +1,4 @@
+export * from './promises';
 export * from './function-anatamoy-overview';
 export * from './function-arrow';
 export * from './function-anatomy-parameters/function-anatomy-parameters';
