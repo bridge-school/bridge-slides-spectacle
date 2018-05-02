@@ -28,14 +28,15 @@ const slideList = [
   ...ArrowSlideSet,
   ...FAnatomyParameterSlideSet,
   ...FPOverviewSlideSet,
-  ...FPFilterSlideSet,
   ...FPMapSlideSet,
+  ...FPFilterSlideSet,
   ImmutabilityOverviewSlide,
   ...PromisesSlideSet
 ];
 
 // Require CSS
 require('normalize.css');
+require('./style.css');
 
 const theme = createTheme(colours, fontFamilies);
 

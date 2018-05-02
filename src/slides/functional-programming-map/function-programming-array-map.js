@@ -1,8 +1,9 @@
 import React from 'react';
-import { CodePane, Heading, List, ListItem, Slide } from 'spectacle';
+import {CodePane, Heading, Link, List, ListItem, Slide} from 'spectacle';
 
 /* eslint import/no-webpack-loader-syntax: off */
 import * as mapCode from '!raw-loader!./functional-programming-map-example';
+import {BasicSlideMaker} from "../../tools";
 
 class FPMapSlide1 extends React.Component {
   render() {
@@ -54,6 +55,12 @@ class FPMapSlide2 extends React.Component {
   }
 }
 
+const Slide3 = BasicSlideMaker(
+  'Array Map',
+  <Link href="https://repl.it/classroom/invite/U04khTZ" target="_blank">Try these exercises!</Link>
+);
+
+
 class FPMapCode extends React.Component {
   render() {
     return (
@@ -69,4 +76,4 @@ class FPMapCode extends React.Component {
   }
 }
 
-export const FPMapSlideSet = [FPMapSlide1, FPMapSlide2, FPMapCode];
+export const FPMapSlideSet = [FPMapSlide1, FPMapSlide2, FPMapCode, Slide3];
