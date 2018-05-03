@@ -1,9 +1,9 @@
 import React from 'react';
-import {CodePane, Link, Slide} from 'spectacle';
+import { Link } from 'spectacle';
 
 /* eslint import/no-webpack-loader-syntax: off */
 import * as filterCode from '!raw-loader!./functional-programming-filter-example';
-import {BasicSlideMaker} from "../../tools";
+import {BasicCodeSlideMaker, BasicSlideMaker} from "../../tools";
 
 const Slide1 = BasicSlideMaker(
   'Array Filter',
@@ -31,25 +31,10 @@ const Slide4 = BasicSlideMaker(
   <Link href="https://repl.it/classroom/invite/U0uxHqc" target="_blank">Try these exercises!</Link>
 );
 
-class FPFilterCode extends React.Component {
-  render() {
-    return (
-      <Slide {...this.props}>
-        <CodePane
-          textSize="26"
-          lang="js"
-          source={filterCode}
-          overflow="overflow"
-        />
-      </Slide>
-    );
-  }
-}
-
 export const FPFilterSlideSet = [
   Slide1,
   Slide2,
-  FPFilterCode,
+  BasicCodeSlideMaker(filterCode),
   Slide3,
   Slide4,
 ];

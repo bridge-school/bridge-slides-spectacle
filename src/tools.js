@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heading, List, ListItem, Slide } from 'spectacle';
+import {CodePane, Heading, List, ListItem, Slide} from 'spectacle';
 
 export const BasicSlideMaker = (title, ...points) => class FPFilterSlide3 extends React.Component {
   render() {
@@ -15,3 +15,18 @@ export const BasicSlideMaker = (title, ...points) => class FPFilterSlide3 extend
     );
   }
 };
+
+export const BasicCodeSlideMaker = rawCode => class FPMapCode extends React.Component {
+  render() {
+    return (
+      <Slide {...this.props}>
+        <CodePane
+          textSize="26"
+          lang="js"
+          source={rawCode}
+          overflow="overflow"
+        />
+      </Slide>
+    );
+  }
+}

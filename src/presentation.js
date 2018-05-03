@@ -12,6 +12,7 @@ import {
   FPMapSlideSet,
   FPOverviewSlideSet,
   ImmutabilityOverviewSlide,
+  OrderOfOperationsSlideSet,
   IntroSlide,
   OverviewSlide,
   FAnatomyPureSlideSet,
@@ -30,6 +31,7 @@ const slideList = [
   ...FPOverviewSlideSet,
   ...FPMapSlideSet,
   ...FPFilterSlideSet,
+  ...OrderOfOperationsSlideSet,
   ImmutabilityOverviewSlide,
   ...PromisesSlideSet
 ];

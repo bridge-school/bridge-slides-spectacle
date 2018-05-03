@@ -10,3 +10,4 @@ export * from './functional-programming-overview';
 export * from './immutability/immutability';
 export * from './intro';
 export * from './overview';
+export * from './interperter';

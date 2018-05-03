@@ -1,48 +1,34 @@
 import React from 'react';
-import { CodePane, Heading, List, ListItem, Slide } from 'spectacle';
 
 /* eslint import/no-webpack-loader-syntax: off */
 import * as paramCode from '!raw-loader!./function-anatomy-parameters-example';
+import * as paramCode2 from '!raw-loader!./parameter-default-and-spread-example';
+import {BasicCodeSlideMaker, BasicSlideMaker} from '../../tools';
+import {Link} from "spectacle";
 
-export class FAnatomyParamSlide extends React.Component {
-  render() {
-    return (
-      <Slide bgColor="primary" transition={['slide']} {...this.props}>
-        <Heading textSize="65" textColor="secondary">
-          Parameters
-        </Heading>
-        <List>
-          <ListItem textSize="32" margin="0 0 1.2rem 0">
-            0 or many items, passed into a function to be used inside of a function
-          </ListItem>
-          <ListItem textSize="32" margin="0 0 1.2rem 0">
-            A function defines it's expected parameters
-          </ListItem>
-          <ListItem textSize="32" margin="0 0 1.2rem 0">
-            The order they are passed in and the order they are expected matters, the first passed in 'maps' to the first expected
-          </ListItem>
-        </List>
-      </Slide>
-    );
-  }
-}
+const Slide1 = BasicSlideMaker(
+  'Parameters',
+  '0 or many items, passed into a function to be used inside of a function',
+  'A function defines it\'s expected parameters',
+  'The order they are passed in and the order they are expected matters, the first passed in \'maps\' to the first expected'
+);
 
-class FAnatomyParameterCode extends React.Component {
-  render() {
-    return (
-      <Slide {...this.props}>
-        <CodePane
-          textSize="26"
-          lang="js"
-          source={paramCode}
-          overflow="overflow"
-        />
-      </Slide>
-    );
-  }
-}
+const Slide2 = BasicSlideMaker(
+  'Parameters',
+  'you can assign default parameter values in es6 if you want a parameter to have a value if no argument is passed in',
+  'you can also use the rest operator on parameters to group them up as an array',
+  'name your parameters well! it helps a lot with readability'
+);
+
+const Slide3 = BasicSlideMaker(
+  'Parameters',
+  <Link href="https://repl.it/classroom/invite/U53uwpg" target="_blank">Try these exercises!</Link>
+);
 
 export const FAnatomyParameterSlideSet = [
-  FAnatomyParamSlide,
-  FAnatomyParameterCode,
+  Slide1,
+  BasicCodeSlideMaker(paramCode),
+  Slide2,
+  BasicCodeSlideMaker(paramCode2),
+  Slide3
 ];
