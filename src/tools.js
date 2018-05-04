@@ -16,12 +16,12 @@ export const BasicSlideMaker = (title, ...points) => class FPFilterSlide3 extend
   }
 };
 
-export const BasicCodeSlideMaker = rawCode => class FPMapCode extends React.Component {
+export const BasicCodeSlideMaker = (rawCode, textSize = 26) => class FPMapCode extends React.Component {
   render() {
     return (
       <Slide {...this.props}>
         <CodePane
-          textSize="26"
+          textSize={textSize}
           lang="js"
           source={rawCode}
           overflow="overflow"

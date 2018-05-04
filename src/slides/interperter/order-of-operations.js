@@ -8,8 +8,8 @@ import * as orderCode2 from '!raw-loader!./immediately-executing-function-exampl
 
 const Slide1 = BasicSlideMaker(
   'Operator Precedence',
-  'A.K.A Order of Operations for javascript',
-  'The interpreter is what executes our javascript code',
+  'aka the order of operations for JavaScript',
+  'The interpreter is what executes our JavaScript code',
   `it 'reads' the code from top to bottom (ignoring hoisting)`,
   <Link target="_blank" href="https://developer.mozilla.org/en-US/docs/Glossary/Hoisting">Hoisting info</Link>
 );

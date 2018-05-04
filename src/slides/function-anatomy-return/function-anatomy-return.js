@@ -7,8 +7,8 @@ const Slide1 = BasicSlideMaker(
   'Returns',
   'A return statement is something you should have in almost all of your functions',
   'Without a return, a function resolves to \'undefined\'',
-  'You can be very creative about what gets returned - for example, another function',
-  'The result of a function return can be used immediately after that function has finished it\'s business'
+  'You can be very creative about what is returned - for example, you can return another function',
+  'The result of a function return can be used immediately after that function has finished its business'
 );
 
 export const FAnatomyReturnSlideSet = [Slide1, BasicCodeSlideMaker(returnCode)];

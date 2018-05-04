@@ -7,8 +7,8 @@ import {BasicCodeSlideMaker, BasicSlideMaker} from "../../tools";
 const Slide1 = BasicSlideMaker(
   'Pure Function',
   'Minimalistic and explicit - you want these to be small and very clear',
-  'No Side effects! A side effect is something that is that in some way accesses a variable that either was not passed in as a parameter, or defined inside the function itself',
-  'Should have a return statement - a pure function should be thought of as a small factory, you give it the supplies, and it outputs the product, same supplies should always give the same product'
+  'No side effects! Don\'t access or change something that exists outside the function; only use or modify values that are passed into or defined inside the function',
+  'Should have a return statement - think of a pure function like a small factory: you give it the supplies and it outputs the product. The most important part is that the same supplies should always give you the same end product'
 );
 
 export const FAnatomyPureSlideSet = [Slide1, BasicCodeSlideMaker(pureCode)];

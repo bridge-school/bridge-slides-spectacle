@@ -6,5 +6,5 @@ function returnTen() {
   10;
 }
 
-const result = return10(); // results in the number 10
-const result2 = returnTen(); // results in undefined
+const result = return10(); // the value is the number 10
+const result2 = returnTen(); // the value is undefined

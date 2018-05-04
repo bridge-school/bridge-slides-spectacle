@@ -8,16 +8,16 @@ import {Link} from "spectacle";
 
 const Slide1 = BasicSlideMaker(
   'Parameters',
-  '0 or many items, passed into a function to be used inside of a function',
-  'A function defines it\'s expected parameters',
-  'The order they are passed in and the order they are expected matters, the first passed in \'maps\' to the first expected'
+  '0 or many items that are passed into a function for its use',
+  'A function defines the parameters it expects',
+  'The order of the parameters passed in should match the order expected by the function'
 );
 
 const Slide2 = BasicSlideMaker(
   'Parameters',
-  'you can assign default parameter values in es6 if you want a parameter to have a value if no argument is passed in',
-  'you can also use the rest operator on parameters to group them up as an array',
-  'name your parameters well! it helps a lot with readability'
+  'In ES6, you can assign default parameter values to be used when an argument is not passed in',
+  'You can also use the rest operator to group the parameters together as an array',
+  'It\'s important to name your parameters well to help with readability'
 );
 
 const Slide3 = BasicSlideMaker(

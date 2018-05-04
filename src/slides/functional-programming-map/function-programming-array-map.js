@@ -7,17 +7,17 @@ import {BasicCodeSlideMaker, BasicSlideMaker} from "../../tools";
 
 const Slide1 = BasicSlideMaker(
   'Array Map',
-  'The .map() method can be called on any Array',
-  'The .map() method Expects a function \'callback\'',
-  'This function is fired for each item in the array - if there are 3 items it fires 3 times',
-  'Each time it fires, it can expect the first parameter to be the current item it is iterating over'
+  'Iterates through a list of items in an array and applies a provided function to each item before putting the result into a new array',
+  'The .map() method expects a function \'callback\'',
+  'This function is fired for each item in the array - if there are three items, the function will run three times',
+  'Each time the function is run, it is passed the current array item as the first parameter'
 );
 
 const Slide2 = BasicSlideMaker(
   'Array Map',
-  'The function should return whatever we want to have in the new array at the same index as the old array',
-  'The original list has -not- been changed',
-  'The new list will be the same length as the old list'
+  'The result of the callback function will be added to the new array at the same index as the input from the original',
+  'Map will always return a new array that is the same length of the original',
+  'The original list will -not- be changed or mutated',
 );
 
 const Slide3 = BasicSlideMaker(
