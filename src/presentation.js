@@ -12,10 +12,12 @@ import {
   FPMapSlideSet,
   FPOverviewSlideSet,
   ImmutabilityOverviewSlide,
+  OrderOfOperationsSlideSet,
   IntroSlide,
   OverviewSlide,
   FAnatomyPureSlideSet,
   ArrowSlideSet,
+  PromisesSlideSet,
 } from './slides';
 
 const slideList = [
@@ -27,13 +29,16 @@ const slideList = [
   ...ArrowSlideSet,
   ...FAnatomyParameterSlideSet,
   ...FPOverviewSlideSet,
-  ...FPFilterSlideSet,
   ...FPMapSlideSet,
+  ...FPFilterSlideSet,
+  ...OrderOfOperationsSlideSet,
   ImmutabilityOverviewSlide,
+  ...PromisesSlideSet
 ];
 
 // Require CSS
 require('normalize.css');
+require('./style.css');
 
 const theme = createTheme(colours, fontFamilies);
 

@@ -1,96 +1,40 @@
 import React from 'react';
-import { CodePane, Heading, List, ListItem, Slide } from 'spectacle';
+import { Link } from 'spectacle';
 
 /* eslint import/no-webpack-loader-syntax: off */
 import * as filterCode from '!raw-loader!./functional-programming-filter-example';
+import {BasicCodeSlideMaker, BasicSlideMaker} from "../../tools";
 
-class FPFilterSlide1 extends React.Component {
-  render() {
-    return (
-      <Slide bgColor="primary" transition={['slide']} {...this.props}>
-        <Heading textSize="75">Array Filter</Heading>
-        <List>
-          <ListItem textSize="32" margin="0 0 1.5rem 0">
-            The .filter() method can be called on any Array
-          </ListItem>
-          <ListItem textSize="32" margin="0 0 1.5rem 0">
-            The .filter() method Expects a function 'callback'
-          </ListItem>
-          <ListItem textSize="32" margin="0 0 1.5rem 0">
-            This function is fired for each item in the array - if there are 3
-            items it fires 3 times
-          </ListItem>
-          <ListItem textSize="32" margin="0 0 1.5rem 0">
-            Each time it fires, it can expect the first parameter to be the
-            current item it is iterating over
-          </ListItem>
-        </List>
-      </Slide>
-    );
-  }
-}
+const Slide1 = BasicSlideMaker(
+  'Array Filter',
+  'The .filter() method can be called on any Array',
+  'The .filter() method Expects a function \'callback\'',
+  'This function is fired for each item in the array - if there are 3 items it fires 3 times',
+  'Each time it fires, it can expect the first parameter to be the current item it is iterating over',
+);
 
-class FPFilterSlide2 extends React.Component {
-  render() {
-    return (
-      <Slide bgColor="primary" transition={['slide']} {...this.props}>
-        <Heading textSize="75">Array Filter</Heading>
-        <List>
-          <ListItem textSize="32" margin="0 0 1.5rem 0">
-            The function should return a 'truthy' or 'falsy' value:
-            <List margin="2rem 0 0 3rem">
-              <ListItem textSize="32" margin="0 0 1.5rem 0">
-                If what's returned is truthy, keep the item currently iterated
-                over in the new list
-              </ListItem>
-              <ListItem textSize="32" margin="0 0 1.5rem 0">
-                If what's returned is falsy, dont keep the item currently
-                iterated over in the new list
-              </ListItem>
-            </List>
-          </ListItem>
-        </List>
-      </Slide>
-    );
-  }
-}
-class FPFilterSlide3 extends React.Component {
-  render() {
-    return (
-      <Slide bgColor="primary" transition={['slide']} {...this.props}>
-        <Heading textSize="75">Array Filter</Heading>
-        <List>
-          <ListItem textSize="32" margin="0 0 1.5rem 0">
-            The original list has -not- been changed
-          </ListItem>
-          <ListItem textSize="32" margin="0 0 1.5rem 0">
-            The new list will be the same length or smaller (most likely
-            smaller) as the old list
-          </ListItem>
-        </List>
-      </Slide>
-    );
-  }
-}
+const Slide2 = BasicSlideMaker(
+  'Array Filter',
+  'The function should return a \'truthy\' or \'falsy\' value:',
+  ' If what\'s returned is truthy, keep the item currently iterated over in the new list',
+  'If what\'s returned is falsy, dont keep the item currently iterated over in the new list'
+);
 
-class FPFilterCode extends React.Component {
-  render() {
-    return (
-      <Slide {...this.props}>
-        <CodePane
-          textSize="26"
-          lang="js"
-          source={filterCode}
-          overflow="overflow"
-        />
-      </Slide>
-    );
-  }
-}
+const Slide3 = BasicSlideMaker(
+  'Array Filter',
+  'The original list has -not- been changed',
+  'The new list will be the same length or smaller (most likely smaller) as the old list'
+);
+
+const Slide4 = BasicSlideMaker(
+  'Array Filter',
+  <Link href="https://repl.it/classroom/invite/U0uxHqc" target="_blank">Try these exercises!</Link>
+);
 
 export const FPFilterSlideSet = [
-  FPFilterSlide1,
-  FPFilterSlide2,
-  FPFilterSlide3,
-  FPFilterCode,
+  Slide1,
+  Slide2,
+  BasicCodeSlideMaker(filterCode),
+  Slide3,
+  Slide4,
 ];

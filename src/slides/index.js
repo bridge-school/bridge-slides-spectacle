@@ -1,3 +1,4 @@
+export * from './promises';
 export * from './function-anatamoy-overview';
 export * from './function-arrow';
 export * from './function-anatomy-parameters/function-anatomy-parameters';
@@ -9,3 +10,4 @@ export * from './functional-programming-overview';
 export * from './immutability/immutability';
 export * from './intro';
 export * from './overview';
+export * from './interperter';
