@@ -22,14 +22,10 @@ import {
 import {ReduceSlideSet} from "./slides/functional-programming-reduce";
 
 const slideList = [
-  IntroSlide,
-  OverviewSlide,
-  FAnatomyOverview,
   ...FAnatomyReturnSlideSet,
   ...FAnatomyPureSlideSet,
   ...ArrowSlideSet,
   ...FAnatomyParameterSlideSet,
-  ...FPOverviewSlideSet,
   ...FPMapSlideSet,
   ...FPFilterSlideSet,
   ...ReduceSlideSet,

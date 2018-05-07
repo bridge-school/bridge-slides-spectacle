@@ -16,7 +16,3 @@ const namesGroupedByFirstLetter = myList.reduce(function(acc, next) {
    acc[firstLetter] = [].concat(sameLetterNamesArray, next); 
    return acc;
 }, {});
-
-// the above written is es6+
-const es6PlusGroup =
-  myList.reduce((acc, next) => ({...acc, [next.charAt(0)]: [].concat(acc[next.charAt(0)] || [], next)}), {});

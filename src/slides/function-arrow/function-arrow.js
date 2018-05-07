@@ -4,6 +4,7 @@ import React from 'react';
 /* eslint import/no-webpack-loader-syntax: off */
 import * as arrowCode from '!raw-loader!./function-arrow-example';
 import {BasicCodeSlideMaker, BasicSlideMaker} from "../../tools";
+import {Link} from "spectacle";
 
 const Slide1 = BasicSlideMaker(
   'Arrow Function (Bonus!)',
@@ -13,4 +14,10 @@ const Slide1 = BasicSlideMaker(
   'Can be written as a single line!'
 );
 
-export const ArrowSlideSet = [Slide1, BasicCodeSlideMaker(arrowCode)];
+
+const Slide2 = BasicSlideMaker(
+  'Arrow Function',
+  <Link href="https://repl.it/classroom/invite/U58GrJs" target="_blank">Try these exercises!</Link>
+);
+
+export const ArrowSlideSet = [Slide1, BasicCodeSlideMaker(arrowCode), Slide2];

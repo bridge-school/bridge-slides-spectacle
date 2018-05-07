@@ -4,6 +4,7 @@ import { Link } from 'spectacle';
 /* eslint import/no-webpack-loader-syntax: off */
 import * as reduceCode from '!raw-loader!./reduce-example';
 import * as reduceCode2 from '!raw-loader!./reduce-example2';
+import * as reduceCode3 from '!raw-loader!./reduce-example3';
 
 import {BasicCodeSlideMaker, BasicSlideMaker} from "../../tools";
 
@@ -41,5 +42,6 @@ export const ReduceSlideSet = [
   Slide3,
   BasicCodeSlideMaker(reduceCode),
   BasicCodeSlideMaker(reduceCode2, 24),
+  BasicCodeSlideMaker(reduceCode3),
   Slide4,
 ];
