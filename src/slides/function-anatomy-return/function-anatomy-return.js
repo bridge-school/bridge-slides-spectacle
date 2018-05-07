@@ -2,6 +2,7 @@ import React from 'react';
 /* eslint import/no-webpack-loader-syntax: off */
 import * as returnCode from '!raw-loader!./function-anatomy-return-example';
 import { BasicCodeSlideMaker, BasicSlideMaker } from '../../tools';
+import {Link} from "spectacle";
 
 const Slide1 = BasicSlideMaker(
   'Returns',
