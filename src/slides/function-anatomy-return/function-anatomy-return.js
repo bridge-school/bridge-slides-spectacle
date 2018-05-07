@@ -11,4 +11,9 @@ const Slide1 = BasicSlideMaker(
   'The result of a function return can be used immediately after that function has finished its business'
 );
 
-export const FAnatomyReturnSlideSet = [Slide1, BasicCodeSlideMaker(returnCode)];
+const Slide2 = BasicSlideMaker(
+  'Returns',
+  <Link href="https://repl.it/classroom/invite/UeLeKQb" target="_blank">Try these exercises!</Link>
+);
+
+export const FAnatomyReturnSlideSet = [Slide1, BasicCodeSlideMaker(returnCode), Slide2];
