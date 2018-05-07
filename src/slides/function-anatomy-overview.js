@@ -10,13 +10,13 @@ export class FAnatomyOverview extends React.Component {
         </Heading>
         <List>
           <ListItem textSize="32" margin="0 0 1.2rem 0">
-            A Return Statement: What the function 'resolves' to when the function finishes running
+            A Return Statement: what the function 'resolves to' or outputs as a result of running the code in the function
           </ListItem>
           <ListItem textSize="32" margin="0 0 1.2rem 0">
-            Parameters: What information a function can expect to have provided to it
+            Parameters: what information a function can expect as input
           </ListItem>
           <ListItem textSize="32" margin="0 0 1.2rem 0">
-            Pure Function: A function that uses the above two ideas to be as reusable, predictable and durable as possible
+            Pure Function: a function that uses the above two ideas to be as reusable, predictable and durable as possible
           </ListItem>
         </List>
       </Slide>

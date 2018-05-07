@@ -1,18 +1,19 @@
-const myList = ['John', 'Jacob', 'Jingleheimer', 'Schmidt'];
+const myList = ['John', 'Jane', 'Joe', 'Sara'];
 
-// for the parameter names I'll use the shorthands acc and next
-// Look carefully at the reduce method, it's taking TWO arguments. The first is a function,
-// the second is an empty object! That means the first time the callback function fires, acc is going to
-// equal {} - an empty object. We can use this to be clever
+// In this example, note the initial value is an object!
+// Let's trace the values through each iteration of this reduce:
+//  First: acc = {}, next = 'John'; returns { J: ['John'] }
+//  Second: acc = { J: ['John'] }, next = 'Jane'; 
+//         returns { J: ['John', 'Jane'] }
+//  Third: acc = { J: ['John', 'Jane'] }, next = 'Joe'; 
+//         returns { J: ['John', 'Jane', 'Joe'] }
+//  Forth: acc = { J: ['John', 'Jane', 'Joe'] }, next = 'Sara'; 
+//         returns { J: ['John', 'Jane', 'Joe'], S: ['Sara'] }
+//  Final value: { J: ['John', 'Jane', 'Joe'], S: ['Sara'] }
 const namesGroupedByFirstLetter = myList.reduce(function(acc, next) {
-   // update the acc object, and set the first letter of one of the names in the list to equal
-   // a new array, where we take whatever is already there (or if nothing is there, an empty array)
-  // and combine it with the next name in the list. For example, the first time this fires, we say
-  // acc[J] = [].concat([], 'John'), which results in an object that looks like
-  // { J: ['John'] }. Each additional call adds to that array of J's, { J: ['John', 'Jacob', 'Jingleheimer'] }
-  // until the last one where have a name that starts with S, which makes us create a new property
-  // The final result = { J: ['John', 'Jacob', 'Jingleheimer'], S: ['Schmidt'] }
-   acc[next.charAt(0)] = [].concat(acc[next.charAt(0)] || [], next);
+   const firstLetter = next.charAt(0);
+   const sameLetterNamesArray = acc[firstLetter] || []; 
+   acc[firstLetter] = [].concat(sameLetterNamesArray, next); 
    return acc;
 }, {});
 

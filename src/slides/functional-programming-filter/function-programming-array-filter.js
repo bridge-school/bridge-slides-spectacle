@@ -7,23 +7,19 @@ import {BasicCodeSlideMaker, BasicSlideMaker} from "../../tools";
 
 const Slide1 = BasicSlideMaker(
   'Array Filter',
-  'The .filter() method can be called on any Array',
-  'The .filter() method Expects a function \'callback\'',
-  'This function is fired for each item in the array - if there are 3 items it fires 3 times',
-  'Each time it fires, it can expect the first parameter to be the current item it is iterating over',
+  'Iterates through a list of items in an array and applies a provided function to each item to determine whether to put the result into the new array',
+  'The .filter() method can be called on any array',
+  'The .filter() method expects a function \'callback\'',
+  'This function is fired for each item in the array - if there are three items, the function will run three times',
+  'Each time the function is run, it is passed the current array item as the first parameter'
 );
 
 const Slide2 = BasicSlideMaker(
   'Array Filter',
-  'The function should return a \'truthy\' or \'falsy\' value:',
-  ' If what\'s returned is truthy, keep the item currently iterated over in the new list',
-  'If what\'s returned is falsy, dont keep the item currently iterated over in the new list'
-);
-
-const Slide3 = BasicSlideMaker(
-  'Array Filter',
-  'The original list has -not- been changed',
-  'The new list will be the same length or smaller (most likely smaller) as the old list'
+  'The callback function should return a \'truthy\' or \'falsy\' value',
+  'If the function returns a truthy value, the current item will be added to the result array. If not, it will be ignored.',
+  'Filter will always return a new array that is the same length or shorter than the original',
+  'The original list will -not- be changed or mutated',
 );
 
 const Slide4 = BasicSlideMaker(
@@ -35,6 +31,5 @@ export const FPFilterSlideSet = [
   Slide1,
   Slide2,
   BasicCodeSlideMaker(filterCode),
-  Slide3,
   Slide4,
 ];
