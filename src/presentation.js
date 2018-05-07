@@ -19,6 +19,7 @@ import {
   ArrowSlideSet,
   PromisesSlideSet,
 } from './slides';
+import {ReduceSlideSet} from "./slides/functional-programming-reduce";
 
 const slideList = [
   IntroSlide,
@@ -31,6 +32,7 @@ const slideList = [
   ...FPOverviewSlideSet,
   ...FPMapSlideSet,
   ...FPFilterSlideSet,
+  ...ReduceSlideSet,
   ...OrderOfOperationsSlideSet,
   ImmutabilityOverviewSlide,
   ...PromisesSlideSet
