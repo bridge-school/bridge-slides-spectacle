@@ -22,7 +22,7 @@ const Slide2 = BasicSlideMaker(
 
 const Slide3 = BasicSlideMaker(
   'Array Map',
-  <Link href="https://repl.it/classroom/invite/U04khTZ" target="_blank">Try these exercises!</Link>
+  <Link href="https://repl.it/classroom/invite/UfJXrZW" target="_blank">Try these exercises!</Link>
 );
 
 export const FPMapSlideSet = [Slide1, Slide2, BasicCodeSlideMaker(mapCode), Slide3];

@@ -24,7 +24,7 @@ const Slide2 = BasicSlideMaker(
 
 const Slide4 = BasicSlideMaker(
   'Array Filter',
-  <Link href="https://repl.it/classroom/invite/U0uxHqc" target="_blank">Try these exercises!</Link>
+  <Link href="https://repl.it/classroom/invite/UfIUspT" target="_blank">Try these exercises!</Link>
 );
 
 export const FPFilterSlideSet = [
