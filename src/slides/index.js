@@ -11,3 +11,4 @@ export * from './immutability/immutability';
 export * from './intro';
 export * from './overview';
 export * from './interperter';
+export * from './function-callback';

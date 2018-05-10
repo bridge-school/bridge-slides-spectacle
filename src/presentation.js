@@ -5,27 +5,25 @@ import createTheme from 'spectacle/lib/themes/default';
 import { colours, fontFamilies } from './theme';
 
 import {
-  FAnatomyOverview,
   FAnatomyParameterSlideSet,
   FAnatomyReturnSlideSet,
   FPFilterSlideSet,
   FPMapSlideSet,
-  FPOverviewSlideSet,
   ImmutabilityOverviewSlide,
   OrderOfOperationsSlideSet,
-  IntroSlide,
-  OverviewSlide,
   FAnatomyPureSlideSet,
   ArrowSlideSet,
   PromisesSlideSet,
+  FCallbackSlideset,
 } from './slides';
 import {ReduceSlideSet} from "./slides/functional-programming-reduce";
 
 const slideList = [
   ...FAnatomyReturnSlideSet,
-  ...FAnatomyPureSlideSet,
-  ...ArrowSlideSet,
   ...FAnatomyParameterSlideSet,
+  ...FAnatomyPureSlideSet,
+  ...FCallbackSlideset,
+  ...ArrowSlideSet,
   ...FPMapSlideSet,
   ...FPFilterSlideSet,
   ...ReduceSlideSet,

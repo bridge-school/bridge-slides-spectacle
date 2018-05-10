@@ -1,9 +1,8 @@
 import React from 'react';
-import { Link } from 'spectacle';
 
 /* eslint import/no-webpack-loader-syntax: off */
 import * as filterCode from '!raw-loader!./functional-programming-filter-example';
-import {BasicCodeSlideMaker, BasicSlideMaker} from "../../tools";
+import {BasicCodeSlideMaker, BasicSlideMaker, ReplClassSignup, ReplFrameSlide} from "../../tools";
 
 const Slide1 = BasicSlideMaker(
   'Array Filter',
@@ -22,14 +21,15 @@ const Slide2 = BasicSlideMaker(
   'The original list will -not- be changed or mutated',
 );
 
-const Slide4 = BasicSlideMaker(
-  'Array Filter',
-  <Link href="https://repl.it/classroom/invite/UfIUspT" target="_blank">Try these exercises!</Link>
-);
+const Slide4 = ReplClassSignup('Array Filter', 'https://repl.it/classroom/invite/UfIUspT');
+const Slide5 = ReplFrameSlide('https://repl.it/student_embed/assignment/997023/5c42df2c82f4a8d9922c36b9a92f2383');
+const Slide6 = ReplFrameSlide('https://repl.it/student_embed/assignment/997024/d4a5a2556ea9fbc4cf4aeff970f24fea');
 
 export const FPFilterSlideSet = [
   Slide1,
   Slide2,
   BasicCodeSlideMaker(filterCode),
   Slide4,
+  Slide5,
+  Slide6
 ];

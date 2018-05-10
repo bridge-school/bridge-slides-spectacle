@@ -3,7 +3,7 @@ import { Link } from 'spectacle';
 
 /* eslint import/no-webpack-loader-syntax: off */
 import * as mapCode from '!raw-loader!./functional-programming-map-example';
-import {BasicCodeSlideMaker, BasicSlideMaker} from "../../tools";
+import {BasicCodeSlideMaker, BasicSlideMaker, ReplClassSignup, ReplFrameSlide} from "../../tools";
 
 const Slide1 = BasicSlideMaker(
   'Array Map',
@@ -20,9 +20,8 @@ const Slide2 = BasicSlideMaker(
   'The original list will -not- be changed or mutated',
 );
 
-const Slide3 = BasicSlideMaker(
-  'Array Map',
-  <Link href="https://repl.it/classroom/invite/UfJXrZW" target="_blank">Try these exercises!</Link>
-);
+const Slide3 = ReplClassSignup('Array Map', 'https://repl.it/classroom/invite/UfJXrZW');
+const Slide4 = ReplFrameSlide('https://repl.it/student_embed/assignment/997068/7542de722e6e8190419a5dd009540b01');
+const Slide5 = ReplFrameSlide('https://repl.it/student_embed/assignment/997070/8d1fa5a839000aa36e665e77fe051b05');
 
-export const FPMapSlideSet = [Slide1, Slide2, BasicCodeSlideMaker(mapCode), Slide3];
+export const FPMapSlideSet = [Slide1, Slide2, BasicCodeSlideMaker(mapCode), Slide3, Slide4, Slide5];
