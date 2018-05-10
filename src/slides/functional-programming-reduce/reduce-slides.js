@@ -1,12 +1,11 @@
 import React from 'react';
-import { Link } from 'spectacle';
 
 /* eslint import/no-webpack-loader-syntax: off */
 import * as reduceCode from '!raw-loader!./reduce-example';
 import * as reduceCode2 from '!raw-loader!./reduce-example2';
 import * as reduceCode3 from '!raw-loader!./reduce-example3';
 
-import {BasicCodeSlideMaker, BasicSlideMaker} from "../../tools";
+import {BasicCodeSlideMaker, BasicSlideMaker, ReplClassSignup, ReplFrameSlide} from "../../tools";
 
 const Slide1 = BasicSlideMaker(
   'Array Reduce',
@@ -31,10 +30,10 @@ const Slide3 = BasicSlideMaker(
   'The last time the reduce callback fires, the result it outputs will be the final reduced value',
 );
 
-const Slide4 = BasicSlideMaker(
-  'Array Reduce',
-  <Link href="https://repl.it/classroom/invite/UdzE1SB" target="_blank">Try these exercises!</Link>
-);
+const Slide4 = ReplClassSignup('Array Reduce', 'https://repl.it/classroom/invite/UdzE1SB');
+const Slide5 = ReplFrameSlide('https://repl.it/student_embed/assignment/994125/d6cbf3fc8c3cd0c249e5e408a086d44a');
+const Slide6 = ReplFrameSlide('https://repl.it/student_embed/assignment/994126/53c2d803a1c1989efbf5e82a1ecd39e1');
+const Slide7 = ReplFrameSlide('https://repl.it/student_embed/assignment/994142/03d8caadb086d52746992fe0973bc866');
 
 export const ReduceSlideSet = [
   Slide1,
@@ -44,4 +43,7 @@ export const ReduceSlideSet = [
   BasicCodeSlideMaker(reduceCode2, 24),
   BasicCodeSlideMaker(reduceCode3),
   Slide4,
+  Slide5,
+  Slide6,
+  Slide7,
 ];
