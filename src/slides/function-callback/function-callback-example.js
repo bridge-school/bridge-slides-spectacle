@@ -3,7 +3,7 @@ function myRegularFunction(a, b) {
   return a + b;
 }
 
-// here we are creating a new variable, ans assigning myRegular function to this
+// here we are creating a new variable, and assigning myRegular function to this
 const copiedRegFunction = myRegularFunction;
 
 // this does not assign a function, but assigns the RESULT (return statement) of an invoked function
