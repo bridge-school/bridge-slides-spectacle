@@ -1,5 +1,5 @@
 import React from 'react';
-import {BasicCodeSlideMaker, BasicSlideMaker} from "../../tools";
+import {BasicCodeSlideMaker, BasicSlideMaker, ReplFrameSlide} from "../../tools";
 import {Link} from "spectacle";
 
 /* eslint import/no-webpack-loader-syntax: off */
@@ -34,11 +34,15 @@ const Slide4 = BasicSlideMaker(
   <Link href="https://repl.it/classroom/invite/U4z6byR" target="_blank">Try these exercises!</Link>
 );
 
+const Slide5 = ReplFrameSlide('https://repl.it/student_embed/assignment/983657/a07ba22437234555da1640c7ccaf2d8e');
+
+
 export const OrderOfOperationsSlideSet = [
   Slide1,
   Slide2,
   BasicCodeSlideMaker(orderCode),
   Slide3,
   BasicCodeSlideMaker(orderCode2),
-  Slide4
+  Slide4,
+  Slide5
 ];

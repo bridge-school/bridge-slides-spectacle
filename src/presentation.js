@@ -9,7 +9,7 @@ import {
   FAnatomyReturnSlideSet,
   FPFilterSlideSet,
   FPMapSlideSet,
-  ImmutabilityOverviewSlide,
+  immutabilitySlideSet,
   OrderOfOperationsSlideSet,
   FAnatomyPureSlideSet,
   ArrowSlideSet,
@@ -28,7 +28,7 @@ const slideList = [
   ...FPFilterSlideSet,
   ...ReduceSlideSet,
   ...OrderOfOperationsSlideSet,
-  ImmutabilityOverviewSlide,
+  ...immutabilitySlideSet,
   ...PromisesSlideSet
 ];
 

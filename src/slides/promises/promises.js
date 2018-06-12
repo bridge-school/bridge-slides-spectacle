@@ -3,7 +3,7 @@ import React from 'react';
 /* eslint import/no-webpack-loader-syntax: off */
 import * as usingPromiseCode from '!raw-loader!./using-a-promise';
 import * as makingPromiseCode from '!raw-loader!./making-a-promise';
-import {BasicCodeSlideMaker, BasicSlideMaker} from "../../tools";
+import {BasicCodeSlideMaker, BasicSlideMaker, ReplClassSignup, ReplFrameSlide} from "../../tools";
 
 const Slide1 = BasicSlideMaker(
   'Promises',
@@ -19,9 +19,20 @@ const Slide2 = BasicSlideMaker(
   'You can make your own promises, but libraries tend to provide them for you'
 );
 
+
+const Slide3 = ReplClassSignup('Promises', 'https://repl.it/classroom/invite/V7RIbIS');
+
+const Slide4 = ReplFrameSlide('https://repl.it/student_embed/assignment/1129030/74479d935c296f8f9705a22acf29dd86');
+const Slide5 = ReplFrameSlide('https://repl.it/student_embed/assignment/1129032/5bf5309bdb323ced41ec1f28a148411f');
+const Slide6 = ReplFrameSlide('https://repl.it/student_embed/assignment/1129363/0cbafc25aa4f659c9385fe14d3525706');
+
 export const PromisesSlideSet = [
     Slide1,
     Slide2,
     BasicCodeSlideMaker(usingPromiseCode),
     BasicCodeSlideMaker(makingPromiseCode),
+    Slide3,
+    Slide4,
+    Slide5,
+    Slide6,
 ];
