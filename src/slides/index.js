@@ -12,3 +12,6 @@ export * from './intro';
 export * from './overview';
 export * from './interperter';
 export * from './function-callback';
+export * from './react-components-intro/components-intro';
+export * from './react-function-component/function-component';
+export * from './react-class-component/class-component';
