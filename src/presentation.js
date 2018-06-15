@@ -15,6 +15,9 @@ import {
   ArrowSlideSet,
   PromisesSlideSet,
   FCallbackSlideset,
+  reactComponentsIntroSlideSet,
+  functionComponentSlideSet,
+  classComponentSlideSet,
 } from './slides';
 import {ReduceSlideSet} from "./slides/functional-programming-reduce";
 
@@ -29,7 +32,10 @@ const slideList = [
   ...ReduceSlideSet,
   ...OrderOfOperationsSlideSet,
   ...immutabilitySlideSet,
-  ...PromisesSlideSet
+  ...PromisesSlideSet,
+  ...reactComponentsIntroSlideSet,
+  ...functionComponentSlideSet,
+  ...classComponentSlideSet
 ];
 
 // Require CSS
