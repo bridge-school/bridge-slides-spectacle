@@ -17,7 +17,7 @@ import {
   FCallbackSlideset,
   reactComponentsIntroSlideSet,
   functionComponentSlideSet,
-  classComponentSlideSet,
+  classComponentSlideSet, reactPropsSlideSet,
 } from './slides';
 import {ReduceSlideSet} from "./slides/functional-programming-reduce";
 
@@ -35,7 +35,8 @@ const slideList = [
   ...PromisesSlideSet,
   ...reactComponentsIntroSlideSet,
   ...functionComponentSlideSet,
-  ...classComponentSlideSet
+  ...classComponentSlideSet,
+  ...reactPropsSlideSet
 ];
 
 // Require CSS
