@@ -14,7 +14,7 @@ const Slide1 = BasicSlideMaker(
   `What this means is that there is a keyword property, 'state', that you can interact with in your class component`,
 );
 
-const Slide2 = BasicCodeSlideMaker(stateExample1);
+const Slide2 = BasicCodeSlideMaker(stateExample1, 20);
 
 const Slide3 = BasicSlideMaker(
   `React State`,
