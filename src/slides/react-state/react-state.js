@@ -48,6 +48,13 @@ const Slide9 = ReplFrameSlide(
   "https://repl.it/@AbdellaPurvi/react-state-exercise-2?lite=true"
 );
 
+const Slide10 = BasicSlideMaker(
+  `Using State Correctly`,
+  `Do not modify state directly, instead use setState`,
+  `State updates may be asynchronous, do not rely on them for calculating the next state. Instead use a callback function with prevState`,
+  `State updates are shallow merged.`
+);
+
 export const reactStateSlideSet = [
   Slide1,
   Slide2,
@@ -57,5 +64,6 @@ export const reactStateSlideSet = [
   Slide6,
   Slide7,
   Slide8,
-  Slide9
+  Slide9,
+  Slide10
 ];
