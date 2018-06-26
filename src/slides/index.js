@@ -18,3 +18,4 @@ export * from "./react-class-component/class-component";
 export * from "./react-props/props";
 export * from "./react-component-lifecycle/lifecycle";
 export * from "./react-state/react-state";
+export * from "./redux-intro/redux-intro";
