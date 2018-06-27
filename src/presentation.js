@@ -20,7 +20,8 @@ import {
   classComponentSlideSet,
   reactPropsSlideSet,
   lifecycleSlideSet,
-  reactStateSlideSet
+  reactStateSlideSet,
+  reduxIntroSet
 } from "./slides";
 import { ReduceSlideSet } from "./slides/functional-programming-reduce";
 
@@ -41,7 +42,8 @@ const slideList = [
   ...classComponentSlideSet,
   ...reactPropsSlideSet,
   ...lifecycleSlideSet,
-  ...reactStateSlideSet
+  ...reactStateSlideSet,
+  ...reduxIntroSet
 ];
 
 // Require CSS
