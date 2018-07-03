@@ -4,11 +4,10 @@ import { ADD_TODO } from "./action-example";
 
 export const StatefulComponent = ({ addToDo, todos }) => (
   <div>
-    Add a ToDo:{" "}
-    <input type="button" name="Add" onClick={this.props.addToDo()} />
+    Add a ToDo: <input type="button" name="Add" onClick={addToDo()} />
     {/* This is the todos object from your reducer which mapStateToProps lets you to access. Since todos is an an array hence we are only displaying the first element */}
     {/* Display the todos here: */}
-    {this.props.todos[1]}
+    {todos.map(todo => <li key={todo.id}>{todo.content}</li>)}
   </div>
 );
 
