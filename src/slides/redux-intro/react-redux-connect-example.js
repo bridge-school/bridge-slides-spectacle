@@ -1,19 +1,16 @@
 import React from "react";
-import { connect } from 'react-redux';
-import { ADD_TODO } from './action-example';
+import { connect } from "react-redux";
+import { ADD_TODO } from "./action-example";
 
-export class StatefulComponent extends React.Component {
-  render() {
-    return (
-      <div>
-        Add a ToDo: <input type="button" name="Add" onClick={this.props.addToDo()} />
-        {/* This is the todos object from your reducer which mapStateToProps lets you to access. Since todos is an an array hence we are only displaying the first element */}
-        {/* Display the todos here: */}
-        {this.props.todos[1]}
-      </div>
-    );
-  }
-}
+export const StatefulComponent = ({ addToDo, todos }) => (
+  <div>
+    Add a ToDo:{" "}
+    <input type="button" name="Add" onClick={this.props.addToDo()} />
+    {/* This is the todos object from your reducer which mapStateToProps lets you to access. Since todos is an an array hence we are only displaying the first element */}
+    {/* Display the todos here: */}
+    {this.props.todos[1]}
+  </div>
+);
 
 // whatever we declare in mapStateToProps and mapDispatchToProps, we can obtain those as props in our component.
 const mapStateToProps = (state, ownProps) => ({
