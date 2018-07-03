@@ -9,7 +9,7 @@ const visibilityFilter = (state = "SHOW_ALL", action) => {
 const todos = (state = [], action) => {
   switch (action.type) {
     case "ADD_TODO":
-      return state.todos.concat([{ text: action.text, completed: false }]);
+      return state.concat([{ text: action.text, completed: false }]);
     case "TOGGLE_TODO":
       return state.map(
         (todo, index) =>
