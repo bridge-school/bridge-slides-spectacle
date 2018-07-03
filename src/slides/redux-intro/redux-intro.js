@@ -86,7 +86,7 @@ const Slide13 = BasicSlideMaker(
 );
 
 const Slide14 = BasicCodeSlideMaker(
-  reactReduxConnectExample, 20, "Component connect with actions dispatch"
+  reactReduxConnectExample, 16, "Component connect with actions dispatch"
 );
 
 
