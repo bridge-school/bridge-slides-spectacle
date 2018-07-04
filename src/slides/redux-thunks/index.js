@@ -10,7 +10,7 @@ import * as reduxThunksBasicExample from '!raw-loader!./thunks-basic-example';
 
 const Slide1 = BasicSlideMaker(
   `What is a Thunk?`,
-  `Thunk is basically a function`,
+  `It's a special name for a function that is returned by another function`,
   `It is a functional programming technique used to delay a task`,
   `Perform work later rather than doing it now and instead, return a function or an expression`,
 );
@@ -19,8 +19,8 @@ const Slide2 = BasicSlideMaker(
   `Why do we need to use a middleware?`,
   `Actions are plain objects and we use action creators so we can pass in specific information to that action, for example`,
   `const ADD_TODO = (text) => { type: "ADD_TODO", text };`,
-  `What if we want to make our actions do something fun such as do some "asyc" but we can't perform async network calls in reducers as they need to be pure functions and we don't want side-effects.`,
-  `Hence we use a middleware such as Redux thunks.`,
+  `What if we want to make our actions do something fun such as do some "async" but we can't perform async network calls in reducers as they need to be pure functions and we don't want side-effects.`,
+  `Hence we use a middleware such as redux-thunks.`,
 );
 
 const Slide3 = BasicSlideMaker(
@@ -43,7 +43,7 @@ const Slide5 = BasicCodeSlideMaker(
 );
 
 const Slide6 = ReplFrameSlide(
-  'https://repl.it/@ShaunLloyd1/redux-thunks-in-react',
+  'https://repl.it/@AbdellaPurvi/redux-thunks-in-react?lite=true',
 );
 
 export const reduxThunksIntroSet = [
