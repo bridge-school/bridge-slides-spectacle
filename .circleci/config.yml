@@ -1,6 +1,9 @@
 version: 2
 jobs:
   build:
+    branches:
+      ignore:
+        - gh-pages
     docker:
       - image: circleci/node:8
     working_directory: ~/repo
@@ -14,18 +17,18 @@ jobs:
           - v1-dependencies-{{ checksum "package.json" }}
           - v1-dependencies-
       - run:
-        name: 📚 Installing dependencies
-        command: yarn install
+          name: Install dependencies
+          command: npm install
       - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
       - run:
-        name: 🏃 Running tests
-        command: yarn test
+          name: Run tests
+          command: npm test
       - deploy:
-        name: 🚀 Deploying to GitHub Pages
-        command: |
+          name: Deploy
+          command: |
             if [ $CIRCLE_BRANCH == $SOURCE_BRANCH ]; then
               git config --global user.email $GH_EMAIL
               git config --global user.name $GH_NAME
@@ -45,7 +48,7 @@ jobs:
               cd out
 
               git add -A
-              git commit -m "🤖 Automated deployment to GitHub Pages: ${CIRCLE_SHA1}" --allow-empty
+              git commit -m "Automated deployment to GitHub Pages: ${CIRCLE_SHA1}" --allow-empty
 
               git push origin $TARGET_BRANCH
             fi
