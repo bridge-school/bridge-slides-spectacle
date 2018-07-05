@@ -1,8 +1,7 @@
-import { BasicCodeSlideMaker, BasicSlideMaker } from '../../tools';
+import { BasicCodeSlideMaker, BasicSlideMaker } from "../../tools";
 
-/* eslint import/no-webpack-loader-syntax: off */
-import * as jsxExample from '!raw-loader!./jsx-example';
-import * as reactComponentExample from '!raw-loader!./react-component-example';
+import * as jsxExample from "!raw-loader!./jsx.example";
+import * as reactComponentExample from "!raw-loader!./react-component.example";
 
 const Slide1 = BasicSlideMaker(
   `React Components`,
@@ -27,7 +26,7 @@ const Slide4 = BasicSlideMaker(
   `One very important thing to remember is that in React, components must be defined with their first letter Capitalized`,
   `myComponent - for example this would not be rendered as a normal component`,
   `MyComponent - this COULD be rendered as a component`,
-  `Rendering a component is slightly different than regular JS variables`,
+  `Rendering a component is slightly different than regular JS variables`
 );
 
 const Slide5 = BasicCodeSlideMaker(reactComponentExample);
@@ -37,5 +36,5 @@ export const reactComponentsIntroSlideSet = [
   Slide2,
   Slide3,
   Slide4,
-  Slide5,
+  Slide5
 ];

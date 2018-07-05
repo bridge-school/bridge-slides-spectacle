@@ -1,10 +1,10 @@
-import React from 'react';
-import { Heading, List, ListItem, Slide, Text } from 'spectacle';
+import React from "react";
+import { Heading, List, ListItem, Slide } from "spectacle";
 
 export class OverviewSlide extends React.Component {
   render() {
     return (
-      <Slide bgColor="primary" transition={['slide']} {...this.props}>
+      <Slide bgColor="primary" transition={["slide"]} {...this.props}>
         <Heading textSize="85" textColor="secondary">
           Agenda
         </Heading>
@@ -15,7 +15,9 @@ export class OverviewSlide extends React.Component {
           <ListItem textSize="32" margin="0 0 1.2rem 0">
             Functional Programming: Filter & Map
           </ListItem>
-          <ListItem textSize="32" margin="0 0 1.2rem 0">Immutability</ListItem>
+          <ListItem textSize="32" margin="0 0 1.2rem 0">
+            Immutability
+          </ListItem>
         </List>
       </Slide>
     );

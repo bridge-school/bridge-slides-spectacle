@@ -1,4 +1,4 @@
-import { BasicCodeSlideMaker, BasicSlideMaker, ReplFrameSlide } from '../../tools';
+import { BasicSlideMaker, ReplFrameSlide } from "../../tools";
 
 const Slide1 = BasicSlideMaker(
   `React Props`,
@@ -21,16 +21,19 @@ const Slide3 = BasicSlideMaker(
   `<MyFunction name="World" /> - the 'name=' is specifying which prop value you are setting, and on the right you can set the value`
 );
 
-const Slide4 = ReplFrameSlide('https://repl.it/@AbdellaPurvi/props-user-example?lite=true');
+const Slide4 = ReplFrameSlide(
+  "https://repl.it/@AbdellaPurvi/props-user-example?lite=true"
+);
 
 const Slide5 = BasicSlideMaker(
   `React Props`,
   `In  the next slide, you'll see some more examples, as well as in class exercises written in the comments around the examples`,
-  `Good luck!`,
+  `Good luck!`
 );
 
-const Slide6 = ReplFrameSlide('https://repl.it/@AbdellaPurvi/React-Props?lite=true');
-
+const Slide6 = ReplFrameSlide(
+  "https://repl.it/@AbdellaPurvi/React-Props?lite=true"
+);
 
 export const reactPropsSlideSet = [
   Slide1,
@@ -38,5 +41,5 @@ export const reactPropsSlideSet = [
   Slide3,
   Slide4,
   Slide5,
-  Slide6,
+  Slide6
 ];
