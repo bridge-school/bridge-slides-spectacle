@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  test:
+  build:
     branches:
       ignore:
         - gh-pages
@@ -42,14 +42,15 @@ jobs:
             git config --global user.email $GH_EMAIL
             git config --global user.name $GH_NAME
             yarn deploy
+
 workflows:
   version: 2
-  test-and-deploy:
+  build-and-deploy:
     jobs:
-      - test
+      - build
       - deploy:
           requires:
-            - test
+            - build
           filters:
             branches:
-              only: chore/fix-circleci-workflows
+              only: master
