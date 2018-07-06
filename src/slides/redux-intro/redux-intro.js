@@ -4,11 +4,10 @@ import {
   ReplFrameSlide
 } from "../../tools";
 
-/* eslint import/no-webpack-loader-syntax: off */
-import * as appStateExample from "!raw-loader!./app-state-example";
-import * as actionExample from "!raw-loader!./action-example";
-import * as reducerExample from "!raw-loader!./reducer-example";
-import * as reactReduxConnectExample from "!raw-loader!./react-redux-connect-example";
+import * as appStateExample from "!raw-loader!./app-state.example";
+import * as actionExample from "!raw-loader!./action.example";
+import * as reducerExample from "!raw-loader!./reducer.example";
+import * as reactReduxConnectExample from "!raw-loader!./react-redux-connect.example";
 
 const Slide1 = BasicSlideMaker(
   `Redux`,
@@ -72,23 +71,24 @@ const Slide11 = BasicSlideMaker(
   `React and Redux can be connected using a connect function made available to us by the module react-redux`,
   `The connect function wraps our component`,
   `The connect function provides us with 2 additional helpful functions called mapStateToProps and mapDispatchToProps`,
-  `connect(mapStateToProps, mapDispatchToProps)(YourStateFulComponent)`,
+  `connect(mapStateToProps, mapDispatchToProps)(YourStateFulComponent)`
 );
 
 const Slide12 = BasicSlideMaker(
   `mapStateToProps`,
-  `Just like the name suggests, it maps the state to props i.e. it gives us access to the redux store state and makes them available as component props`,
+  `Just like the name suggests, it maps the state to props i.e. it gives us access to the redux store state and makes them available as component props`
 );
 
 const Slide13 = BasicSlideMaker(
   `mapDispatchToProps`,
-  `Just like the name suggests, it maps the dispatch function to props i.e. just like we saw earlier, we can dispatch redux actions created and it makes them available as component props`,
+  `Just like the name suggests, it maps the dispatch function to props i.e. just like we saw earlier, we can dispatch redux actions created and it makes them available as component props`
 );
 
 const Slide14 = BasicCodeSlideMaker(
-  reactReduxConnectExample, 16, "Component connect with actions dispatch"
+  reactReduxConnectExample,
+  16,
+  "Component connect with actions dispatch"
 );
-
 
 export const reduxIntroSet = [
   Slide1,
@@ -104,5 +104,5 @@ export const reduxIntroSet = [
   Slide11,
   Slide12,
   Slide13,
-  Slide14,
+  Slide14
 ];

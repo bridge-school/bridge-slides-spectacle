@@ -1,8 +1,10 @@
-import { BasicCodeSlideMaker, BasicSlideMaker, ReplFrameSlide } from '../../tools';
+import {
+  BasicCodeSlideMaker,
+  BasicSlideMaker,
+  ReplFrameSlide
+} from "../../tools";
 
-/* eslint import/no-webpack-loader-syntax: off */
-import * as functionComponent1 from '!raw-loader!./function-component-example-1.md';
-
+import * as functionComponent1 from "!raw-loader!./function-component.example";
 
 const Slide1 = BasicSlideMaker(
   `React Components - Function`,
@@ -21,9 +23,12 @@ const Slide3 = BasicSlideMaker(
   `They re-render whenever their parents change, and you can't really prevent that unlike with class components`
 );
 
-const Slide4 = ReplFrameSlide('https://repl.it/@AbdellaPurvi/function-components?lite=true');
-const Slide5 = ReplFrameSlide('https://repl.it/@AbdellaPurvi/exercise-components-1?lite=true');
-
+const Slide4 = ReplFrameSlide(
+  "https://repl.it/@AbdellaPurvi/function-components?lite=true"
+);
+const Slide5 = ReplFrameSlide(
+  "https://repl.it/@AbdellaPurvi/exercise-components-1?lite=true"
+);
 
 export const functionComponentSlideSet = [
   Slide1,

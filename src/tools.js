@@ -58,7 +58,13 @@ export const ReplFrameSlide = url =>
     render() {
       return (
         <Slide {...this.props}>
-          <iframe frameborder="0" width="100%" height="600px" src={url} />
+          <iframe
+            title="repl-example"
+            frameborder="0"
+            width="100%"
+            height="600px"
+            src={url}
+          />
         </Slide>
       );
     }

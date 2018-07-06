@@ -1,0 +1,5 @@
+build
+scripts
+public
+**/*.example.js
+*.css

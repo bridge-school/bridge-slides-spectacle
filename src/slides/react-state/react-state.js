@@ -4,11 +4,10 @@ import {
   ReplFrameSlide
 } from "../../tools";
 
-/* eslint import/no-webpack-loader-syntax: off */
-import * as stateExample1 from "!raw-loader!./state-example-1";
-import * as stateExample2 from "!raw-loader!./state-example-2";
-import * as stateExample3 from "!raw-loader!./state-example-3";
-import * as stateExample4 from "!raw-loader!./state-example-4";
+import * as stateExample1 from "!raw-loader!./state-1.example";
+import * as stateExample2 from "!raw-loader!./state-2.example";
+import * as stateExample3 from "!raw-loader!./state-3.example";
+import * as stateExample4 from "!raw-loader!./state-4.example";
 
 const Slide1 = BasicSlideMaker(
   `React State`,
