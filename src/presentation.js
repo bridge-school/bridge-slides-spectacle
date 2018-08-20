@@ -1,21 +1,21 @@
 // Import React
-import React from 'react';
-import { Deck } from 'spectacle';
-import createTheme from 'spectacle/lib/themes/default';
-import { colours, fontFamilies } from './theme';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import {       
+import React from "react";
+import { Deck } from "spectacle";
+import createTheme from "spectacle/lib/themes/default";
+import { colours, fontFamilies } from "./theme";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import {
   functionsSlideList,
   functionalProgrammingSlideList,
   interpreterSlideList,
   promisesSlideList,
-  reactSlideList, 
-  reduxSlideList 
-} from './slideDecks'; // get the slide decks
+  reactSlideList,
+  reduxSlideList
+} from "./slideDecks"; // get the slide decks
 
 // Require CSS
-require('normalize.css');
-require('./style.css');
+require("normalize.css");
+require("./style.css");
 
 const theme = createTheme(colours, fontFamilies);
 
@@ -23,76 +23,82 @@ const contentModules = [
   {
     path: "functions",
     deck: functionsSlideList,
-    title: "Functions",
+    title: "Functions"
   },
   {
     path: "functional-programming",
     deck: functionalProgrammingSlideList,
-    title: "Functional Programming",
+    title: "Functional Programming"
   },
   {
     path: "interpreter",
     deck: interpreterSlideList,
-    title: "The Interpreter",
+    title: "The Interpreter"
   },
   {
     path: "promises",
     deck: promisesSlideList,
-    title: "Promises",
+    title: "Promises"
   },
   {
     path: "react",
     deck: reactSlideList,
-    title: "React",
+    title: "React"
   },
   {
     path: "redux",
     deck: reduxSlideList,
-    title: "Redux",
-  },
+    title: "Redux"
+  }
 ];
 
 export default class Presentation extends React.Component {
-
-  renderSlides = (slideList) => {
+  renderSlides = slideList => {
     return slideList.map((WorkshopSlide, i) => (
-      <WorkshopSlide key={'slide' + i} />
+      <WorkshopSlide key={"slide" + i} />
     ));
-  }
+  };
 
-  renderSlideDeck = (routeProps, slideList) => { 
+  renderSlideDeck = (routeProps, slideList) => {
     return (
       <Deck transition={[]} transitionDuration={0} progress="bar" theme={theme}>
-        { this.renderSlides(slideList) }
+        {this.renderSlides(slideList)}
       </Deck>
     );
-  }
+  };
 
   createRoute = (module, key) => {
     return (
-      <Route path={`/${module.path}/`} key={key} render={(props) => this.renderSlideDeck(props, module.deck)} />
+      <Route
+        path={`${process.env.PUBLIC_URL}/${module.path}/`}
+        key={key}
+        render={props => this.renderSlideDeck(props, module.deck)}
+      />
     );
-  }
+  };
 
-  createRouteList = (modules) => {
+  createRouteList = modules => {
     return modules.map((module, i) => this.createRoute(module, i));
-  }
+  };
 
-  createLinkList = (modules) => {
+  createLinkList = modules => {
     return (
       <ul className="slide-deck-link-list">
-        {
-          modules.map((module, i) => {
-            return (
-              <li key={i} className="link-section">
-                  <Link className="slide-deck-link" to={`/${module.path}/`}>{module.title}</Link>
-              </li>
-            );
-          })
-        }
+        {modules.map((module, i) => {
+          return (
+            <li key={i} className="link-section">
+              <Link
+                className="slide-deck-link"
+                to={`${process.env.PUBLIC_URL}/${module.path}/`}
+              >
+                {module.title}
+              </Link>
+            </li>
+          );
+        })}
       </ul>
     );
-  }
+  };
 
   render() {
     return (
@@ -102,7 +108,7 @@ export default class Presentation extends React.Component {
             {this.createRouteList(contentModules)}
           </div>
           <div className="links-list">
-            <h2 className="links-heading">Choose a slide deck by topic:</h2>
+            <h2 className="links-heading">Modules:</h2>
             {this.createLinkList(contentModules)}
           </div>
         </div>

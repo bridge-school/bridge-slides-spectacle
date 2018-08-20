@@ -1,7 +1,7 @@
 {
   "name": "bridge-intermediate-js-workshop-spectacle",
   "version": "0.1.0",
-  "homepage": "https://bridge-school.github.io",
+  "homepage": "https://bridge-school.github.io/bridge-slides-spectacle",
   "private": true,
   "resolutions": {
     "spectacle/**/prismjs": "1.6.0"
