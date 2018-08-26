@@ -1,7 +1,7 @@
 import React from "react";
 import { CodePane, Heading, Link, List, ListItem, Slide, Notes } from "spectacle";
 
-export const ListSlideMaker = (title, points, notes) =>
+export const ListSlideMaker = (title, points, notes = []) =>
   class FPFilterSlide3 extends React.Component {
     render() {
       return (
@@ -9,7 +9,7 @@ export const ListSlideMaker = (title, points, notes) =>
           <Heading textSize="75">{title}</Heading>
           <List>
             {points.map((point, i) => (
-              <ListItem key={i} textSize="36" margin="0 0 1.5rem 0">
+              <ListItem key={i} textSize="32" margin="0 0 1.5rem 0">
                 {point}
               </ListItem>
             ))}
