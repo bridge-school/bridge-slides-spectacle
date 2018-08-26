@@ -9,12 +9,18 @@ export const ListSlideMaker = (title, points, notes) =>
           <Heading textSize="75">{title}</Heading>
           <List>
             {points.map((point, i) => (
-              <ListItem key={i} textSize="42" margin="0 0 1.5rem 0">
+              <ListItem key={i} textSize="36" margin="0 0 1.5rem 0">
                 {point}
               </ListItem>
             ))}
           </List>
-          <Notes>{notes}</Notes>
+          <Notes>
+              {notes.map((note, i) => (
+                <p key={i}>
+                  {note}
+                </p>
+              ))}
+          </Notes>
         </Slide>
       );
     }
