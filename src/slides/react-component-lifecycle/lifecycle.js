@@ -1,6 +1,6 @@
 import React from "react";
 import { Slide, Heading, Text, List, ListItem, Link } from "spectacle";
-import { BasicSlideMaker } from "../../tools";
+import { ListSlideMaker } from "../../tools";
 
 class OverviewSlide extends React.Component {
   render() {
@@ -27,57 +27,57 @@ class OverviewSlide extends React.Component {
   }
 }
 
-const MountSlide = BasicSlideMaker(`Mounting Events`);
+const MountSlide = ListSlideMaker(`Mounting Events`);
 
-const ConstructorSlide = BasicSlideMaker(
+const ConstructorSlide = ListSlideMaker(
   `constructor (props)`,
-  `Called to construct an instance of the component class`,
-  `Used to initialize state and bind methods`
+  [`Called to construct an instance of the component class`,
+  `Used to initialize state and bind methods`]
 );
 
-const DerivedStateSlide = BasicSlideMaker(
+const DerivedStateSlide = ListSlideMaker(
   `getDerivedStateFromProps (props, state)`,
-  `Called just before the render method. Both on initial mount and updates`,
+  [`Called just before the render method. Both on initial mount and updates`,
   `Used to help compute state based on a prop change`,
   `Returns an object to update the state or null to update nothing`,
-  `Should be used sparingly`
+  `Should be used sparingly`]
 );
 
-const DidMountSlide = BasicSlideMaker(
+const DidMountSlide = ListSlideMaker(
   `componentDidMount ()`,
-  `Called once the component is successfully mounted (rendered into the DOM)`,
-  `A great place to make fetch calls`
+  [`Called once the component is successfully mounted (rendered into the DOM)`,
+  `A great place to make fetch calls`]
 );
 
-const UpdateSlide = BasicSlideMaker(`Updating Events`);
+const UpdateSlide = ListSlideMaker(`Updating Events`);
 
-const ShouldUpdateSlide = BasicSlideMaker(
+const ShouldUpdateSlide = ListSlideMaker(
   `shouldComponentUpdate (nextProps, nextState)`,
-  `Called after getDerivedStateFromProps`,
+  [`Called after getDerivedStateFromProps`,
   `Used to return a boolean to determine whether the component should rerender`,
-  `Useful but should not be needed often`
+  `Useful but should not be needed often`]
 );
 
-const DidUpdateSlide = BasicSlideMaker(
+const DidUpdateSlide = ListSlideMaker(
   `componentDidUpdate (previousProps, PreviousState)`,
-  `Called right after the component is updated in the DOM`,
+  [`Called right after the component is updated in the DOM`,
   `Good place to make HTTP requests as long as you compare your previous state and props their current values`,
-  `Can call this.setState as long is it wrapped in a condition to avoid an infinite loop`
+  `Can call this.setState as long is it wrapped in a condition to avoid an infinite loop`]
 );
 
-const UnmountSlide = BasicSlideMaker(`Unmounting Events`);
+const UnmountSlide = ListSlideMaker(`Unmounting Events`);
 
-const WillUnmountSlide = BasicSlideMaker(
+const WillUnmountSlide = ListSlideMaker(
   `componentWillUnmount ()`,
-  `Called before the component is unmounted and destroyed`,
-  `Used for clean up like removing timers, cancelling network requests, etc`
+  [`Called before the component is unmounted and destroyed`,
+  `Used for clean up like removing timers, cancelling network requests, etc`]
 );
 
-const DeprecatedSlide = BasicSlideMaker(
+const DeprecatedSlide = ListSlideMaker(
   `Deprecated Events`,
-  `componentWillMount`,
+  [`componentWillMount`,
   `componentWillUpdate`,
-  `componentWillRecieveProps`
+  `componentWillRecieveProps`]
 );
 
 class ResourcesSlide extends React.Component {

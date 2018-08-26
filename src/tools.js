@@ -1,28 +1,29 @@
 import React from "react";
-import { CodePane, Heading, Link, List, ListItem, Slide } from "spectacle";
+import { CodePane, Heading, Link, List, ListItem, Slide, Notes } from "spectacle";
 
-export const BasicSlideMaker = (title, ...points) =>
+export const ListSlideMaker = (title, points, notes) =>
   class FPFilterSlide3 extends React.Component {
     render() {
       return (
         <Slide bgColor="primary" transition={["slide"]} {...this.props}>
           <Heading textSize="75">{title}</Heading>
           <List>
-            {points.map(point => (
-              <ListItem textSize="32" margin="0 0 1.5rem 0">
+            {points.map((point, i) => (
+              <ListItem key={i} textSize="42" margin="0 0 1.5rem 0">
                 {point}
               </ListItem>
             ))}
           </List>
+          <Notes>{notes}</Notes>
         </Slide>
       );
     }
   };
 
 export const ReplClassSignup = (label, link) =>
-  BasicSlideMaker(
+  ListSlideMaker(
     label,
-    <Link
+    [<Link
       href={link}
       style={{ color: "white", textDecoration: "underline" }}
       target="_blank"
@@ -33,7 +34,7 @@ export const ReplClassSignup = (label, link) =>
     <span>
       Then return to this page and navigate to the next slide to see your
       exercises
-    </span>
+    </span>]
   );
 
 export const BasicCodeSlideMaker = (rawCode, textSize = 26, title) =>
@@ -60,7 +61,7 @@ export const ReplFrameSlide = url =>
         <Slide {...this.props}>
           <iframe
             title="repl-example"
-            frameborder="0"
+            frameBorder="0"
             width="100%"
             height="600px"
             src={url}

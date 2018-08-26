@@ -2,23 +2,23 @@ import * as usingPromiseCode from "!raw-loader!./using-a-promise.example";
 import * as makingPromiseCode from "!raw-loader!./making-a-promise.example";
 import {
   BasicCodeSlideMaker,
-  BasicSlideMaker,
+  ListSlideMaker,
   ReplClassSignup,
   ReplFrameSlide
 } from "../../tools";
 
-const Slide1 = BasicSlideMaker(
+const Slide1 = ListSlideMaker(
   "Promises",
-  "A promise is a placeholder for a value that is unknown at the time of its creation.",
+  ["A promise is a placeholder for a value that is unknown at the time of its creation.",
   "Promises have been supported as of the ES6/ES2015 standard and all of the major browsers, other than IE, support most if not all of the corresponding functionality.",
-  "Promises represent one of a handful of ways to deal with asynchronous behaviour"
+  "Promises represent one of a handful of ways to deal with asynchronous behaviour"]
 );
 
-const Slide2 = BasicSlideMaker(
+const Slide2 = ListSlideMaker(
   "Promises",
-  "In simple terms, a promise is an object with a 'then' function that takes a callback",
+  ["In simple terms, a promise is an object with a 'then' function that takes a callback",
   "When the promise resolves, the callback fires",
-  "You can make your own promises, but libraries tend to provide them for you"
+  "You can make your own promises, but libraries tend to provide them for you"]
 );
 
 const Slide3 = ReplClassSignup(
