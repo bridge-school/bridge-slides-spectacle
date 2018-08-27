@@ -1,17 +1,17 @@
 import * as returnCode from "!raw-loader!./function-anatomy-return.example";
 import {
   BasicCodeSlideMaker,
-  BasicSlideMaker,
+  ListSlideMaker,
   ReplClassSignup,
   ReplFrameSlide
 } from "../../tools";
 
-const Slide1 = BasicSlideMaker(
+const Slide1 = ListSlideMaker(
   "Returns",
-  "A return statement is something you should have in almost all of your functions",
+  ["A return statement is something you should have in almost all of your functions",
   "Without a return, a function resolves to 'undefined'",
   "You can be very creative about what is returned - for example, you can return another function",
-  "The result of a function return can be used immediately after that function has finished its business"
+  "The result of a function return can be used immediately after that function has finished its business"]
 );
 
 const Slide2 = ReplClassSignup(
