@@ -29,56 +29,58 @@ class OverviewSlide extends React.Component {
 
 const MountSlide = ListSlideMaker(`Mounting Events`);
 
-const ConstructorSlide = ListSlideMaker(
-  `constructor (props)`,
-  [`Called to construct an instance of the component class`,
-  `Used to initialize state and bind methods`]
-);
+const ConstructorSlide = ListSlideMaker(`constructor (props)`, [
+  `Called to construct an instance of the component class`,
+  `Used to initialize state and bind methods`
+]);
 
 const DerivedStateSlide = ListSlideMaker(
   `getDerivedStateFromProps (props, state)`,
-  [`Called just before the render method. Both on initial mount and updates`,
-  `Used to help compute state based on a prop change`,
-  `Returns an object to update the state or null to update nothing`,
-  `Should be used sparingly`]
+  [
+    `Called just before the render method. Both on initial mount and updates`,
+    `Used to help compute state based on a prop change`,
+    `Returns an object to update the state or null to update nothing`,
+    `Should be used sparingly`
+  ]
 );
 
-const DidMountSlide = ListSlideMaker(
-  `componentDidMount ()`,
-  [`Called once the component is successfully mounted (rendered into the DOM)`,
-  `A great place to make fetch calls`]
-);
+const DidMountSlide = ListSlideMaker(`componentDidMount ()`, [
+  `Called once the component is successfully mounted (rendered into the DOM)`,
+  `A great place to make fetch calls`
+]);
 
 const UpdateSlide = ListSlideMaker(`Updating Events`);
 
 const ShouldUpdateSlide = ListSlideMaker(
   `shouldComponentUpdate (nextProps, nextState)`,
-  [`Called after getDerivedStateFromProps`,
-  `Used to return a boolean to determine whether the component should rerender`,
-  `Useful but should not be needed often`]
+  [
+    `Called after getDerivedStateFromProps`,
+    `Used to return a boolean to determine whether the component should rerender`,
+    `Useful but should not be needed often`
+  ]
 );
 
 const DidUpdateSlide = ListSlideMaker(
   `componentDidUpdate (previousProps, PreviousState)`,
-  [`Called right after the component is updated in the DOM`,
-  `Good place to make HTTP requests as long as you compare your previous state and props their current values`,
-  `Can call this.setState as long is it wrapped in a condition to avoid an infinite loop`]
+  [
+    `Called right after the component is updated in the DOM`,
+    `Good place to make HTTP requests as long as you compare your previous state and props their current values`,
+    `Can call this.setState as long is it wrapped in a condition to avoid an infinite loop`
+  ]
 );
 
 const UnmountSlide = ListSlideMaker(`Unmounting Events`);
 
-const WillUnmountSlide = ListSlideMaker(
-  `componentWillUnmount ()`,
-  [`Called before the component is unmounted and destroyed`,
-  `Used for clean up like removing timers, cancelling network requests, etc`]
-);
+const WillUnmountSlide = ListSlideMaker(`componentWillUnmount ()`, [
+  `Called before the component is unmounted and destroyed`,
+  `Used for clean up like removing timers, cancelling network requests, etc`
+]);
 
-const DeprecatedSlide = ListSlideMaker(
-  `Deprecated Events`,
-  [`componentWillMount`,
+const DeprecatedSlide = ListSlideMaker(`Deprecated Events`, [
+  `componentWillMount`,
   `componentWillUpdate`,
-  `componentWillRecieveProps`]
-);
+  `componentWillRecieveProps`
+]);
 
 class ResourcesSlide extends React.Component {
   render() {
