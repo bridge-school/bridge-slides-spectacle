@@ -1,76 +1,68 @@
 // divide slides into modules
 
 import {
-    FAnatomyParameterSlideSet,
-    FAnatomyReturnSlideSet,
-    ArrowSlideSet,
-    FCallbackSlideset,
-    FAnatomyPureSlideSet,
-    FPFilterSlideSet,
-    FPMapSlideSet,
-    immutabilitySlideSet,
-    OrderOfOperationsSlideSet,
-    PromisesSlideSet,
-    reactComponentsIntroSlideSet,
-    functionComponentSlideSet,
-    classComponentSlideSet,
-    reactPropsSlideSet,
-    lifecycleSlideSet,
-    reactStateSlideSet,
-    reduxIntroSet,
-    reduxThunksIntroSet,
-  } from './slides';
-  import { ReduceSlideSet } from './slides/functional-programming-reduce';
-  
-  // FUNCTIONS
-  const functionsSlideList = [
-    ...FAnatomyParameterSlideSet,
-    ...FAnatomyReturnSlideSet,
-    ...ArrowSlideSet,
-    ...FCallbackSlideset,
-    ...FAnatomyPureSlideSet,
-  ];
+  FAnatomyParameterSlideSet,
+  FAnatomyReturnSlideSet,
+  ArrowSlideSet,
+  FCallbackSlideset,
+  FAnatomyPureSlideSet,
+  FPFilterSlideSet,
+  FPMapSlideSet,
+  immutabilitySlideSet,
+  OrderOfOperationsSlideSet,
+  PromisesSlideSet,
+  reactComponentsIntroSlideSet,
+  functionComponentSlideSet,
+  classComponentSlideSet,
+  reactPropsSlideSet,
+  lifecycleSlideSet,
+  reactStateSlideSet,
+  reduxIntroSet,
+  reduxThunksIntroSet,
+} from './slides';
+import { ReduceSlideSet } from './slides/functional-programming-reduce';
 
-  // FUNCTIONAL PROGRAMMING
-  const functionalProgrammingSlideList = [
-    ...FPFilterSlideSet,
-    ...FPMapSlideSet,
-    ...ReduceSlideSet,
-    ...immutabilitySlideSet,
-  ];
+// FUNCTIONS
+const functionsSlideList = [
+  ...FAnatomyParameterSlideSet,
+  ...FAnatomyReturnSlideSet,
+  ...ArrowSlideSet,
+  ...FCallbackSlideset,
+  ...FAnatomyPureSlideSet,
+];
 
-  // INTERPRETER
-  const interpreterSlideList = [
-    ...OrderOfOperationsSlideSet,
-  ];
+// FUNCTIONAL PROGRAMMING
+const functionalProgrammingSlideList = [
+  ...FPMapSlideSet,
+  ...FPFilterSlideSet,
+  ...ReduceSlideSet,
+  ...immutabilitySlideSet,
+];
 
-  // PROMISES
-  const promisesSlideList = [
-    ...PromisesSlideSet,
-  ];
+// INTERPRETER
+const interpreterSlideList = [...OrderOfOperationsSlideSet];
 
-  // REACT
-  const reactSlideList = [
-    ...classComponentSlideSet,
-    ...lifecycleSlideSet,
-    ...reactComponentsIntroSlideSet,
-    ...functionComponentSlideSet,
-    ...reactPropsSlideSet,
-    ...reactStateSlideSet,
-  ];
+// PROMISES
+const promisesSlideList = [...PromisesSlideSet];
 
-  // REDUX
-  const reduxSlideList = [
-    ...reduxIntroSet,
-    ...reduxThunksIntroSet,
-  ];
+// REACT
+const reactSlideList = [
+  ...classComponentSlideSet,
+  ...lifecycleSlideSet,
+  ...reactComponentsIntroSlideSet,
+  ...functionComponentSlideSet,
+  ...reactPropsSlideSet,
+  ...reactStateSlideSet,
+];
 
-  export {
-      functionsSlideList,
-      functionalProgrammingSlideList,
-      interpreterSlideList,
-      promisesSlideList,
-      reactSlideList, 
-      reduxSlideList
-  };
-  
+// REDUX
+const reduxSlideList = [...reduxIntroSet, ...reduxThunksIntroSet];
+
+export {
+  functionsSlideList,
+  functionalProgrammingSlideList,
+  interpreterSlideList,
+  promisesSlideList,
+  reactSlideList,
+  reduxSlideList,
+};
