@@ -5,22 +5,17 @@ import {
   ReplClassSignup,
   ReplFrameSlide
 } from "../../tools";
+import { ARROW_FUNCTIONS } from "../../links";
 
-const Slide1 = ListSlideMaker(
-  "Arrow Function",
-  ["A shorthand for a regular function",
+const Slide1 = ListSlideMaker("Arrow Function", [
+  "A shorthand for a regular function",
   "Must be defined on a variable - can't use the 'function' keyword",
   "Can be written in a way to return a value by default and without using the 'return' keyword",
-  "Can be written as a single line!"]
-);
+  "Can be written as a single line!"
+]);
 
-const Slide2 = ReplClassSignup(
-  "Arrow Function",
-  "https://repl.it/classroom/invite/U58GrJ"
-);
-const Slide3 = ReplFrameSlide(
-  "https://repl.it/student_embed/assignment/994892/2990a9577dc2df49e19e6c36d40ff428"
-);
+const Slide2 = ReplClassSignup("Arrow Function", ARROW_FUNCTIONS.invite);
+const Slide3 = ReplFrameSlide(ARROW_FUNCTIONS.exercise1);
 
 export const ArrowSlideSet = [
   Slide1,
