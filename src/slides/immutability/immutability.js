@@ -14,24 +14,28 @@ import * as objcode2 from "!raw-loader!./obj-code-2.example";
 
 const Slide1 = ListSlideMaker(
   "Immutability",
-  ["Working in an immutable way means to never -modify- an object, but rather make a new copy of an object with changes",
-  "This is valuable for writing pure and predictable functions",
-  "This is valuable for writing tests and having easily debugged code",
-  "This is valuable for 'state management' - ie, keeping ontop of what your apps data is, what changed it, and when"]
+  [
+    "Working in an immutable way means never modifying an object, but making a new copy with changes",
+    "This is valuable for writing pure and predictable functions",
+    "This is valuable for writing tests and having easily debuggable code",
+    "This is valuable for 'state management', ie, keeping ontop of what your app's data is, what changed it, and when"
+  ]
 );
 
 const Slide2 = ListSlideMaker(
   "Immutability - Array",
-  [`Array's have methods that modify their value, like .push()`,
-  `Mutating Array's can lead you to losing original data in cases that you would like to keep that data`,
-  `Mutation in general can make it hard to figure out how your data has changed`,
-  `You can see which methods are 'mutators' here:`,
-  <Link
-    target="_blank"
-    href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Methods"
-  >
-    Array Methods
-  </Link>]
+  [
+    "Arrays have methods that modify their value, like .push()",
+    "Mutating Arrays can lead you to losing original data in cases that you would like to keep that data",
+    "Mutation in general can make it hard to figure out how your data has changed",
+    "You can see which methods are 'mutators' here:",
+    <Link
+      target="_blank"
+      href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Methods"
+    >
+      Array Methods
+    </Link>
+  ]
 );
 
 const Slide3 = BasicCodeSlideMaker(arrayCode1);
@@ -39,16 +43,20 @@ const Slide4 = BasicCodeSlideMaker(arrayCode2);
 
 const Slide5 = ListSlideMaker(
   "Immutability - Object",
-  [`Objects are challenging to copy and modify without changing the original object`,
-  `Traditionally we update properties on objects using the = operator, but this is not immutable`]
+  [
+    "Objects are challenging to copy and modify without changing the original object",
+    "Traditionally we update properties on objects using the '=' operator, but this is not immutable"
+  ]
 );
 
 const Slide6 = BasicCodeSlideMaker(objcode1);
 
 const Slide7 = ListSlideMaker(
   "Immutability - Object",
-  [`Instead of using the = operator to change an object's values, it's a good idea to use Object.assign or object spread - {...}`,
-  `When used correctly, these allow you to make copies of your objects, with changes, without changing the original object`]
+  [
+    "Instead of using the '=' operator to change an object's values, it's a good idea to use 'Object.assign' or object spread { ...object }",
+    "When used correctly, these allow you to make copies of your objects, with changes, without changing the original object"
+  ]
 );
 
 const Slide8 = BasicCodeSlideMaker(objcode2, 20);
