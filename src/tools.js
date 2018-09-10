@@ -1,11 +1,11 @@
-import React from "react";
-import { CodePane, Heading, Link, List, ListItem, Slide, Notes } from "spectacle";
+import React from 'react';
+import { CodePane, Heading, Link, List, ListItem, Slide, Notes } from 'spectacle';
 
-export const ListSlideMaker = (title, points, notes = []) =>
+export const ListSlideMaker = (title, points = [], notes = []) =>
   class FPFilterSlide3 extends React.Component {
     render() {
       return (
-        <Slide bgColor="primary" transition={["slide"]} {...this.props}>
+        <Slide bgColor="primary" transition={['slide']} {...this.props}>
           <Heading textSize="75">{title}</Heading>
           <List>
             {points.map((point, i) => (
@@ -15,11 +15,9 @@ export const ListSlideMaker = (title, points, notes = []) =>
             ))}
           </List>
           <Notes>
-              {notes.map((note, i) => (
-                <p key={i}>
-                  {note}
-                </p>
-              ))}
+            {notes.map((note, i) => (
+              <p key={i}>{note}</p>
+            ))}
           </Notes>
         </Slide>
       );
@@ -27,21 +25,12 @@ export const ListSlideMaker = (title, points, notes = []) =>
   };
 
 export const ReplClassSignup = (label, link) =>
-  ListSlideMaker(
-    label,
-    [<Link
-      href={link}
-      style={{ color: "white", textDecoration: "underline" }}
-      target="_blank"
-    >
-      Click this link to sign up for the {label} related exercises if you
-      haven't already
+  ListSlideMaker(label, [
+    <Link href={link} style={{ color: 'white', textDecoration: 'underline' }} target="_blank">
+      Click this link to sign up for the {label} related exercises if you haven't already
     </Link>,
-    <span>
-      Then return to this page and navigate to the next slide to see your
-      exercises
-    </span>]
-  );
+    <span>Then return to this page and navigate to the next slide to see your exercises</span>,
+  ]);
 
 export const BasicCodeSlideMaker = (rawCode, textSize = 26, title) =>
   class FPMapCode extends React.Component {
@@ -49,12 +38,7 @@ export const BasicCodeSlideMaker = (rawCode, textSize = 26, title) =>
       return (
         <Slide {...this.props}>
           {title && <Heading textSize="50">{title}</Heading>}
-          <CodePane
-            textSize={textSize}
-            lang="js"
-            source={rawCode}
-            overflow="overflow"
-          />
+          <CodePane textSize={textSize} lang="js" source={rawCode} overflow="overflow" />
         </Slide>
       );
     }
@@ -65,13 +49,7 @@ export const ReplFrameSlide = url =>
     render() {
       return (
         <Slide {...this.props}>
-          <iframe
-            title="repl-example"
-            frameBorder="0"
-            width="100%"
-            height="600px"
-            src={url}
-          />
+          <iframe title="repl-example" frameBorder="0" width="100%" height="600px" src={url} />
         </Slide>
       );
     }
