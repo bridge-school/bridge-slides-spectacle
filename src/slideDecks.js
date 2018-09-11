@@ -47,11 +47,11 @@ const promisesSlideList = [...PromisesSlideSet];
 
 // REACT
 const reactSlideList = [
-  ...classComponentSlideSet,
-  ...lifecycleSlideSet,
   ...reactComponentsIntroSlideSet,
   ...functionComponentSlideSet,
   ...reactPropsSlideSet,
+  ...classComponentSlideSet,
+  ...lifecycleSlideSet,
   ...reactStateSlideSet,
 ];
 
