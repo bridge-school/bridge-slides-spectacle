@@ -1,0 +1,10 @@
+describe('calculator', function() {
+  // describes a module with nested "describe" functions
+  describe('add', function() {
+    // specify the expected behavior
+    it('should add 2 numbers', function() {
+       //Use assertion functions to test the expected behavior
+       ...
+    })
+  })
+})

@@ -1,0 +1,6 @@
+expect(value)
+  .toBeFalsy()
+  .toBeNull()
+  .toBeTruthy()
+  .toBeUndefined()
+  .toBeDefined()

@@ -1,62 +1,66 @@
 // Import React
-import React from "react";
-import { Deck } from "spectacle";
-import createTheme from "spectacle/lib/themes/default";
-import { colours, fontFamilies } from "./theme";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import React from 'react';
+import { Deck } from 'spectacle';
+import createTheme from 'spectacle/lib/themes/default';
+import { colours, fontFamilies } from './theme';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import {
   functionsSlideList,
   functionalProgrammingSlideList,
   interpreterSlideList,
   promisesSlideList,
   reactSlideList,
-  reduxSlideList
-} from "./slideDecks"; // get the slide decks
+  reduxSlideList,
+  unitTestingSlideList,
+} from './slideDecks'; // get the slide decks
 
 // Require CSS
-require("normalize.css");
-require("./style.css");
+require('normalize.css');
+require('./style.css');
 
 const theme = createTheme(colours, fontFamilies);
 
 const contentModules = [
   {
-    path: "functions",
+    path: 'functions',
     deck: functionsSlideList,
-    title: "Functions"
+    title: 'Functions',
   },
   {
-    path: "functional-programming",
+    path: 'functional-programming',
     deck: functionalProgrammingSlideList,
-    title: "Functional Programming"
+    title: 'Functional Programming',
   },
   {
-    path: "interpreter",
+    path: 'interpreter',
     deck: interpreterSlideList,
-    title: "The Interpreter"
+    title: 'The Interpreter',
   },
   {
-    path: "promises",
+    path: 'promises',
     deck: promisesSlideList,
-    title: "Promises"
+    title: 'Promises',
   },
   {
-    path: "react",
+    path: 'unit-testing',
+    deck: unitTestingSlideList,
+    title: 'Unit Testing',
+  },
+  {
+    path: 'react',
     deck: reactSlideList,
-    title: "React"
+    title: 'React',
   },
   {
-    path: "redux",
+    path: 'redux',
     deck: reduxSlideList,
-    title: "Redux"
-  }
+    title: 'Redux',
+  },
 ];
 
 export default class Presentation extends React.Component {
   renderSlides = slideList => {
-    return slideList.map((WorkshopSlide, i) => (
-      <WorkshopSlide key={"slide" + i} />
-    ));
+    return slideList.map((WorkshopSlide, i) => <WorkshopSlide key={'slide' + i} />);
   };
 
   renderSlideDeck = (routeProps, slideList) => {
@@ -87,10 +91,7 @@ export default class Presentation extends React.Component {
         {modules.map((module, i) => {
           return (
             <li key={i} className="link-section">
-              <Link
-                className="slide-deck-link"
-                to={`${process.env.PUBLIC_URL}/${module.path}/`}
-              >
+              <Link className="slide-deck-link" to={`${process.env.PUBLIC_URL}/${module.path}/`}>
                 {module.title}
               </Link>
             </li>
@@ -104,9 +105,7 @@ export default class Presentation extends React.Component {
     return (
       <Router>
         <div className="presentation-container">
-          <div className="routes-list">
-            {this.createRouteList(contentModules)}
-          </div>
+          <div className="routes-list">{this.createRouteList(contentModules)}</div>
           <div className="links-list">
             <h2 className="links-heading">Modules:</h2>
             {this.createLinkList(contentModules)}
