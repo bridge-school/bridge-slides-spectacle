@@ -1,0 +1,14 @@
+// component
+const Date = ({ date }) => <div>Today's date is {date}</div>
+
+// component test
+import testRenderer from 'react-test-renderer'
+import { Date } from './date';
+
+describe('date', () => {
+  it('renders the date', () => {
+    const date = testRenderer.create(<Date date="Thursday August 2nd" />)
+
+    expect(date.toJSON().children).toEqual(['Today\'s date is Thursday August 2nd'])
+  })
+})

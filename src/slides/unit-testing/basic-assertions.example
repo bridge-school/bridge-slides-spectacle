@@ -1,0 +1,5 @@
+expect(value)
+  .not
+  .toBe(value)
+  .toEqual(value)
+  .toBeTruthy()

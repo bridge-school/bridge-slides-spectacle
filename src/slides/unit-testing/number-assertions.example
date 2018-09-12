@@ -1,0 +1,6 @@
+expect(value)
+  .toBeCloseTo(number, numDigits)
+  .toBeGreaterThan(number)
+  .toBeGreaterThanOrEqual(number)
+  .toBeLessThan(number)
+  .toBeLessThanOrEqual(number)

@@ -3,3 +3,4 @@ scripts
 public
 **/*.example.js
 *.css
+**/*.example

@@ -19,6 +19,8 @@ import {
   reactStateSlideSet,
   reduxIntroSet,
   reduxThunksIntroSet,
+  unitTestingIntroSet,
+  unitTestingSet,
 } from './slides';
 import { ReduceSlideSet } from './slides/functional-programming-reduce';
 
@@ -45,6 +47,9 @@ const interpreterSlideList = [...OrderOfOperationsSlideSet];
 // PROMISES
 const promisesSlideList = [...PromisesSlideSet];
 
+// UNIT TESTING
+const unitTestingSlideList = [...unitTestingIntroSet, ...unitTestingSet];
+
 // REACT
 const reactSlideList = [
   ...reactComponentsIntroSlideSet,
@@ -65,4 +70,5 @@ export {
   promisesSlideList,
   reactSlideList,
   reduxSlideList,
+  unitTestingSlideList,
 };

@@ -1,0 +1,5 @@
+// button.component.js
+
+export const Button ({ children, onClick }) => <button onClick={onClick}>{children}</button>
+
+// button.component.test.js
