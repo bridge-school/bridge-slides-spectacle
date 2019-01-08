@@ -58,6 +58,5 @@ export class Slide2 extends React.Component {
 
 const Slide3 = ReplClassSignup('Array Map', MAP.invite);
 const Slide4 = ReplFrameSlide(MAP.exercise1);
-const Slide5 = ReplFrameSlide(MAP.exercise2);
 
-export const FPMapSlideSet = [Slide1, Slide2, BasicCodeSlideMaker(mapCode), Slide3, Slide4, Slide5];
+export const FPMapSlideSet = [Slide1, Slide2, BasicCodeSlideMaker(mapCode), Slide3, Slide4];

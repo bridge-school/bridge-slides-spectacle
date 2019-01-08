@@ -58,6 +58,5 @@ export class Slide2 extends React.Component {
 
 const Slide4 = ReplClassSignup('Array Filter', FILTER.invite);
 const Slide5 = ReplFrameSlide(FILTER.exercise1);
-const Slide6 = ReplFrameSlide(FILTER.exercise2);
 
-export const FPFilterSlideSet = [Slide1, Slide2, BasicCodeSlideMaker(filterCode), Slide4, Slide5, Slide6];
+export const FPFilterSlideSet = [Slide1, Slide2, BasicCodeSlideMaker(filterCode), Slide4, Slide5];

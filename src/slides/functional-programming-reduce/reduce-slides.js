@@ -57,8 +57,6 @@ export class Slide2 extends React.Component {
 
 const Slide3 = ReplClassSignup('Array Reduce', REDUCE.invite);
 const Slide4 = ReplFrameSlide(REDUCE.exercise1);
-const Slide5 = ReplFrameSlide(REDUCE.exercise2);
-const Slide6 = ReplFrameSlide(REDUCE.exercise3);
 
 export const ReduceSlideSet = [
   Slide1,
@@ -68,6 +66,4 @@ export const ReduceSlideSet = [
   BasicCodeSlideMaker(reduceCode3),
   Slide3,
   Slide4,
-  Slide5,
-  Slide6,
 ];
