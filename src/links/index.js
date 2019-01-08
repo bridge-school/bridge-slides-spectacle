@@ -27,13 +27,13 @@ export const PURE_FUNCTIONS = {
 export const FILTER = {
   invite: 'https://repl.it/classroom/invite/4Zjq5QB',
   exercise1: 'https://repl.it/student_embed/assignment/2410967/d5b7a1013743dbc7155c704b67907cd3',
-  exercise2: 'https://repl.it/student_embed/assignment/1490943/7cf916312a71aab62f56a16b78903406',
+  exercise2: 'https://repl.it/student_embed/assignment/2426861/df1699800eb46a2fbcc6e642116ae99f',
 };
 
 export const MAP = {
   invite: 'https://repl.it/classroom/invite/4Zjq5QB',
   exercise1: 'https://repl.it/student_embed/assignment/2410966/4267917d63e71d9fc13e3d24fe0bac68',
-  exercise2: 'https://repl.it/student_embed/assignment/1490941/0cd4dd9dc924589b1814a3d307e654d8',
+  exercise2: 'https://repl.it/student_embed/assignment/2426741/9496868c270d0562a072a983ee1ee1a6',
 };
 
 export const REDUCE = {
