@@ -4,6 +4,9 @@ executors:
   node_executor:
     docker:
       - image: circleci/node:8
+    environment:
+      - SOURCE_BRANCH: master
+      - TARGET_BRANCH: gh-pages
 jobs:
   build:
     executor: node_executor
@@ -42,10 +45,7 @@ jobs:
           command: yarn build
       - run:
           name: Deploying to GitHub Pages
-          command: |
-            git config --global user.email $GH_EMAIL
-            git config --global user.name $GH_NAME
-            yarn deploy
+          command: ./scripts/deploy.sh
 
 workflows:
   version: 2
