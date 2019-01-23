@@ -27,7 +27,7 @@ export const ListSlideMaker = (title, points = [], notes = []) =>
 export const ReplClassSignup = (label, link) =>
   ListSlideMaker(label, [
     <Link href={link} style={{ textDecoration: 'underline' }} target="_blank">
-      Click this link to sign up for the {label} related exercises if you haven't already
+      Click this link to sign up for the {label} related exercises if you {"haven't"} already
     </Link>,
     <span>Then return to this page and navigate to the next slide to see your exercises</span>,
   ]);
