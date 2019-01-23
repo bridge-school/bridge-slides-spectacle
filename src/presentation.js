@@ -2,7 +2,7 @@
 import React from 'react';
 import { Deck } from 'spectacle';
 import createTheme from 'spectacle/lib/themes/default';
-import { colours, fontFamilies } from './theme';
+import { colours, fontFamilies, progress } from './theme';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import {
   functionsSlideList,

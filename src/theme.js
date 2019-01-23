@@ -17,10 +17,10 @@ export const lineHeights = {
 };
 
 export const colours = {
-  primary: '#212121',
-  secondary: 'white',
-  tertiary: 'white',
-  quartenary: '#F2F2F2',
+  primary: '#ffffff',
+  secondary: '#212121',
+  tertiary: '#212121',
+  quartenary: '#212121',
   gold: '#FFC400',
   yellow: '#FFEB3B',
   pink: '#FF7EAB',
