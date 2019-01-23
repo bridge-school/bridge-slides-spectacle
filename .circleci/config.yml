@@ -14,14 +14,14 @@ jobs:
             - v1-dependencies-{{ checksum "package.json" }}
             - v1-dependencies-
       - run:
-          name: 📚 Installing dependencies
+          name: Installing dependencies
           command: yarn install
       - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
       - run:
-          name: 🏃 Running tests
+          name: Running tests
           command: yarn lint
       - run:
           name: Build
@@ -35,13 +35,13 @@ jobs:
             - v1-dependencies-{{ checksum "package.json" }}
             - v1-dependencies-
       - run:
-          name: 📚 Installing dependencies
+          name: Installing dependencies
           command: yarn install
       - run:
           name: Build
           command: yarn build
       - run:
-          name: 🚀 Deploying to GitHub Pages
+          name: Deploying to GitHub Pages
           command: |
             git config --global user.email $GH_EMAIL
             git config --global user.name $GH_NAME
