@@ -1,12 +1,12 @@
-version: 2
-jobs:
-  build:
-    branches:
-      ignore:
-        - gh-pages
+version: 2.1
+
+executors:
+  node_executor:
     docker:
       - image: circleci/node:8
-    working_directory: ~/repo
+jobs:
+  build:
+    executor: node_executor
     steps:
       - checkout
       - restore_cache:
@@ -23,11 +23,39 @@ jobs:
       - run:
           name: 🏃 Running tests
           command: yarn lint
-      - deploy:
+      - run:
+          name: Build
+          command: yarn build
+  deploy:
+    executor: node_executor
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-
+      - run:
+          name: 📚 Installing dependencies
+          command: yarn install
+      - run:
+          name: Build
+          command: yarn build
+      - run:
           name: 🚀 Deploying to GitHub Pages
           command: |
-            if [ $CIRCLE_BRANCH == master ]; then
-              git config --global user.email $GH_EMAIL
-              git config --global user.name $GH_NAME
-              yarn deploy
-            fi
+            git config --global user.email $GH_EMAIL
+            git config --global user.name $GH_NAME
+            yarn deploy
+
+workflows:
+  version: 2
+  test_build_deploy:
+    jobs:
+      - build:
+          filters:
+            branches:
+              ignore: gh-pages
+      - deploy:
+          filters:
+            branches:
+              only: master
