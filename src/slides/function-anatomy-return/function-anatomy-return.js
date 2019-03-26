@@ -1,6 +1,5 @@
 import * as returnCode from '!raw-loader!./function-anatomy-return.example';
-import { BasicCodeSlideMaker, ListSlideMaker, ReplClassSignup } from '../../tools';
-import { RETURN } from '../../links';
+import { BasicCodeSlideMaker, ListSlideMaker } from '../../tools';
 
 const Slide1 = ListSlideMaker('Returns', [
   'A return statement is something you should have in almost all of your functions',
@@ -9,6 +8,4 @@ const Slide1 = ListSlideMaker('Returns', [
   'The result of a function return can be used immediately after that function has finished its business',
 ]);
 
-const Slide2 = ReplClassSignup('Returns', RETURN.invite);
-
-export const FAnatomyReturnSlideSet = [Slide1, BasicCodeSlideMaker(returnCode), Slide2];
+export const FAnatomyReturnSlideSet = [Slide1, BasicCodeSlideMaker(returnCode)];
