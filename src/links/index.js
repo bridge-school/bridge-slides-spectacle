@@ -1,44 +1,26 @@
-export const PARAMETERS = {
-  invite: 'https://repl.it/classroom/invite/XvipfNO',
-  exercise1: 'https://repl.it/student_embed/assignment/1492285/0339cc5f2176593cbe1e6a6b6cf40cb2',
-};
-
-export const RETURN = {
-  invite: 'https://repl.it/classroom/invite/Xvb4pIt',
-  exercise1: 'https://repl.it/student_embed/assignment/1492272/e1e304a8fbe1dad1eefaddbe897bdae6',
-  exercise2: 'https://repl.it/student_embed/assignment/1492271/4257dd0bdc509b2cc123249c1ff02526',
-};
-
-export const ARROW_FUNCTIONS = {
-  invite: 'https://repl.it/classroom/invite/XvedktC',
-  exercise1: 'https://repl.it/student_embed/assignment/1492279/4905683f6a600f95f4b74d3003cec53a',
-};
-
 export const CALLBACKS = {
-  invite: 'https://repl.it/classroom/invite/4Zjq5QB',
-  exercise1: 'https://repl.it/student_embed/assignment/2411244/c07f8cfc1c44fffff93dada539f1a94e',
+  invite: 'https://repl.it/classroom/invite/8UoV4Jp',
+  exercise1: 'https://repl.it/student_embed/assignment/3006690/5465ab0bed049194bec1f5a4588c6a35',
 };
 
 export const PURE_FUNCTIONS = {
-  invite: 'https://repl.it/classroom/invite/4Zjq5QB',
-  exercise1: 'https://repl.it/student_embed/assignment/2410962/0daba390c33aaf5bffc4477b5232af85',
+  invite: 'https://repl.it/classroom/invite/8UoV4Jp',
+  exercise1: 'https://repl.it/student_embed/assignment/3006681/c2ba9246770393a37b586175baf02b28',
 };
 
 export const FILTER = {
-  invite: 'https://repl.it/classroom/invite/4Zjq5QB',
-  exercise1: 'https://repl.it/student_embed/assignment/2410967/d5b7a1013743dbc7155c704b67907cd3',
-  exercise2: 'https://repl.it/student_embed/assignment/2426861/df1699800eb46a2fbcc6e642116ae99f',
+  invite: 'https://repl.it/classroom/invite/8UoV4Jp',
+  exercise1: 'https://repl.it/student_embed/assignment/3006683/1eace0362249ff54717c3170db9916fc',
+  exercise2: 'https://repl.it/student_embed/assignment/3006688/ba5f88591c4a5cb9569a1a00dd5e901b',
 };
 
 export const MAP = {
-  invite: 'https://repl.it/classroom/invite/4Zjq5QB',
-  exercise1: 'https://repl.it/student_embed/assignment/2410966/4267917d63e71d9fc13e3d24fe0bac68',
-  exercise2: 'https://repl.it/student_embed/assignment/2426741/9496868c270d0562a072a983ee1ee1a6',
+  invite: 'https://repl.it/classroom/invite/8UoV4Jp',
+  exercise1: 'https://repl.it/student_embed/assignment/3006687/733a1874bd7735aa1738cc1050be8d4a',
+  exercise2: 'https://repl.it/student_embed/assignment/3006691/acc6b8500d3608cb2b52efbba0352c09',
 };
 
 export const REDUCE = {
-  invite: 'https://repl.it/classroom/invite/4Zjq5QB',
-  exercise1: 'https://repl.it/student_embed/assignment/2410969/2ce8cc165054e840c0e2d8749c03f234',
-  exercise2: 'https://repl.it/student_embed/assignment/1492277/6369db51be4ea2fd4243a68a1a51a1dd',
-  exercise3: 'https://repl.it/student_embed/assignment/1492276/ee34964c023ce10ef6d37129343a0e7d',
+  invite: 'https://repl.it/classroom/invite/8UoV4Jp',
+  exercise1: 'https://repl.it/student_embed/assignment/3006684/eafbd84d7fc2d91903fc2b221f707eae',
 };
