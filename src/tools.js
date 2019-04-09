@@ -1,5 +1,5 @@
 import React from 'react';
-import { CodePane, Heading, Link, List, ListItem, Slide, Notes } from 'spectacle';
+import { CodePane, Heading, Link, List, ListItem, Slide, Notes, Image } from 'spectacle';
 
 export const ListSlideMaker = (title, points = [], notes = []) =>
   class FPFilterSlide3 extends React.Component {
@@ -50,6 +50,17 @@ export const ReplFrameSlide = url =>
       return (
         <Slide {...this.props}>
           <iframe title="repl-example" frameBorder="0" width="100%" height="600px" src={url} />
+        </Slide>
+      );
+    }
+  };
+
+export const IllustrationSlide = src =>
+  class Illustration extends React.Component {
+    render() {
+      return (
+        <Slide className="illustration-container" height="100%">
+          <Image src={src} />
         </Slide>
       );
     }
