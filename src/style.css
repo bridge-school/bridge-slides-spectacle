@@ -1,20 +1,26 @@
 .spectacle-content {
-    max-width: 90vw !important;
+  max-width: 90vw !important;
+}
+
+.illustration-container {
+  max-width: 100% !important;
+  height: 100% !important;
+  max-height: unset !important;
 }
 
 .presentation-container {
-    padding: 60px;
-    font-family: 'Helvetica', sans-serif;
+  padding: 60px;
+  font-family: 'Helvetica', sans-serif;
 }
 
 .presentation-container .links-heading {
-    font-size: 36px;
-    color: #2f0087 ;
-} 
+  font-size: 36px;
+  color: #2f0087;
+}
 
 .presentation-container .slide-deck-link {
-    font-size: 24px;
-    text-decoration: none;
-    cursor: pointer;
-    color: #5a0637;
-} 
+  font-size: 24px;
+  text-decoration: none;
+  cursor: pointer;
+  color: #5a0637;
+}
