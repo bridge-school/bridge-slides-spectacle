@@ -2,8 +2,10 @@ import React from 'react';
 import * as reduceCode from '!raw-loader!./reduce.example';
 import * as reduceCode2 from '!raw-loader!./reduce-2.example';
 import * as reduceCode3 from '!raw-loader!./reduce-3.example';
+import comparisonMapFilterReduce from './map-filter-reduce.png';
+import reduceWalkthrough from './reduce-walkthrough.png';
 
-import { BasicCodeSlideMaker, ReplClassSignup, ReplFrameSlide } from '../../tools';
+import { BasicCodeSlideMaker, ReplClassSignup, ReplFrameSlide, IllustrationSlide } from '../../tools';
 import { REDUCE } from '../../links';
 import { Slide, Heading, Text, List, ListItem } from 'spectacle';
 
@@ -55,12 +57,17 @@ export class Slide2 extends React.Component {
   }
 }
 
+const ComparisonIllustration = IllustrationSlide(comparisonMapFilterReduce);
+const ReduceWalkthroughIllustration = IllustrationSlide(reduceWalkthrough);
+
 const Slide3 = ReplClassSignup('Array Reduce', REDUCE.invite);
 const Slide4 = ReplFrameSlide(REDUCE.exercise1);
 
 export const ReduceSlideSet = [
   Slide1,
   Slide2,
+  ComparisonIllustration,
+  ReduceWalkthroughIllustration,
   BasicCodeSlideMaker(reduceCode),
   BasicCodeSlideMaker(reduceCode2, 24),
   BasicCodeSlideMaker(reduceCode3),
