@@ -1,6 +1,8 @@
 import React from 'react';
 import { CodePane, Heading, Link, List, ListItem, Slide, Notes, Image } from 'spectacle';
 
+const createSrcUrl = src => (process.env.NODE_ENV === 'production' ? `/bridge-slides-spectacle${src}` : src);
+
 export const ListSlideMaker = (title, points = [], notes = []) =>
   class FPFilterSlide3 extends React.Component {
     render() {
@@ -60,7 +62,7 @@ export const IllustrationSlide = src =>
     render() {
       return (
         <Slide className="illustration-container" height="100%">
-          <Image src={src} />
+          <Image src={createSrcUrl(src)} />
         </Slide>
       );
     }
