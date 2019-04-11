@@ -42,14 +42,14 @@ const contentModules = [
     title: 'Promises',
   },
   {
-    path: 'unit-testing',
-    deck: unitTestingSlideList,
-    title: 'Unit Testing',
-  },
-  {
     path: 'react',
     deck: reactSlideList,
     title: 'React',
+  },
+  {
+    path: 'unit-testing',
+    deck: unitTestingSlideList,
+    title: 'Unit Testing',
   },
   {
     path: 'redux',
