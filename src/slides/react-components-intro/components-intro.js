@@ -5,7 +5,7 @@ import * as reactComponentExample from '!raw-loader!./react-component.example';
 
 const Slide1 = ListSlideMaker(`React`, [
   `React is a component based library - meaning that it uses components to represents parts of the user view`,
-  `A component can be thought of as javascript, html and css all packaged into a an (ideally) small and reusable piece of code`,
+  `A component can be thought of as javascript, html and css all packaged into a small (ideally) and reusable piece of code`,
   `Component based architecture has been around for a while, and is now increasingly common on the web`,
   `List of Component based Libraries/Frameworks: React.js, Vue.js, Angular 2+, Polymer, Aurelia, more++`,
 ]);
