@@ -24,3 +24,10 @@ export const REDUCE = {
   invite: 'https://repl.it/classroom/invite/8UoV4Jp',
   exercise1: 'https://repl.it/student_embed/assignment/3006684/eafbd84d7fc2d91903fc2b221f707eae',
 };
+
+export const PROMISES = {
+  invite: 'https://repl.it/classroom/invite/8UoV4Jp',
+  resolveExercise: 'https://repl.it/student_embed/assignment/3006682/de2e0c6646be9ea7d83fb90933e2a1ac',
+  rejectExercise: 'https://repl.it/student_embed/assignment/3006686/0760b70e505cd68b70430d7333ed853d',
+  fetchExercise: 'https://repl.it/student_embed/assignment/3006685/ec4246de7d437c0be0511aefe4444655',
+};
