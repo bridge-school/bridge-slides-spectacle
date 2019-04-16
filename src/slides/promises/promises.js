@@ -1,4 +1,7 @@
 import * as basicPromiseFormat from '!raw-loader!./basic-promise-format.example';
+import * as callbackHellExample from '!raw-loader!./callback-hell.example';
+import * as callbackHellExampleConverted from '!raw-loader!./callback-hell-converted.example';
+import * as callbackHellExampleConverted2 from '!raw-loader!./callback-hell-converted-2.example';
 import * as usingPromiseCode from '!raw-loader!./using-a-promise.example';
 import * as makingPromiseCode from '!raw-loader!./making-a-promise.example';
 import promiseIllustration from './promises.png';
@@ -10,6 +13,7 @@ const whatIsAPromiseGoodFor = ListSlideMaker(
     'Promises are one of a handful of ways to deal with asynchronous behaviour',
     'Are an easier way of executing and coordinating multiple async requests',
     'Supported as of the ES6 standard and in all major browsers, other than IE11',
+    'Great way to avoid callback hell',
   ],
   [
     'Review synchronous vs. asynchronous: synchronous - each task completes before moving one, async - move on before the task completes. Review: an example of asynchronous event is fetching data from web service',
@@ -24,6 +28,7 @@ const whatIsAPromise = ListSlideMaker(
     'A Promise is a placeholder for data that may be available in the future',
     'When a Promise is created it runs automatically and has a pending status',
     'A Promise either resolves with data (fulfilled), or rejects with a reason (rejected)',
+    'Access resolved values from promises with .then() and catch errors with .catch()',
   ],
   [
     "Challenge: be able to define these keywords by the end of class, 'pending, settled, fulfilled, rejected'",
@@ -76,15 +81,19 @@ const chainingRepl = ReplFrameSlide(
 
 export const PromisesSlideSet = [
   whatIsAPromiseGoodFor,
+  BasicCodeSlideMaker(callbackHellExample, 18),
   whatIsAPromise,
-  IllustrationSlide(promiseIllustration),
+  BasicCodeSlideMaker(usingPromiseCode),
+  writeAPromise,
   BasicCodeSlideMaker(basicPromiseFormat),
   BasicCodeSlideMaker(makingPromiseCode),
-  writeAPromise,
+  IllustrationSlide(promiseIllustration),
+  chainingPromises,
+  BasicCodeSlideMaker(callbackHellExample, 18),
+  BasicCodeSlideMaker(callbackHellExampleConverted),
+  BasicCodeSlideMaker(callbackHellExampleConverted2),
   replLink,
   promiseResolveRepl,
   promiseRejectRepl,
-  chainingPromises,
-  BasicCodeSlideMaker(usingPromiseCode),
   chainingRepl,
 ];
