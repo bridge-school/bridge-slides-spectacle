@@ -3,6 +3,7 @@ import * as usingPromiseCode from '!raw-loader!./using-a-promise.example';
 import * as makingPromiseCode from '!raw-loader!./making-a-promise.example';
 import promiseIllustration from './promises.png';
 import { BasicCodeSlideMaker, ListSlideMaker, ReplClassSignup, ReplFrameSlide, IllustrationSlide } from '../../tools';
+import { PROMISES } from '../../links';
 
 const whatIsAPromiseGoodFor = ListSlideMaker(
   'Promises: what are they good for?',
@@ -44,15 +45,11 @@ const writeAPromise = ListSlideMaker(
   ['Live code (Repl)'],
 );
 
-const replLink = ReplClassSignup('Promises', 'https://repl.it/classroom/invite/V7RIbIS');
+const replLink = ReplClassSignup('Promises', PROMISES.invite);
 
-const promiseResolveRepl = ReplFrameSlide(
-  'https://repl.it/student_embed/assignment/1129030/74479d935c296f8f9705a22acf29dd86',
-);
+const promiseResolveRepl = ReplFrameSlide(PROMISES.resolveExercise);
 
-const promiseRejectRepl = ReplFrameSlide(
-  'https://repl.it/student_embed/assignment/1129032/5bf5309bdb323ced41ec1f28a148411f',
-);
+const promiseRejectRepl = ReplFrameSlide(PROMISES.rejectExercise);
 
 const chainingPromises = ListSlideMaker(
   'Promise chaining',
@@ -70,9 +67,7 @@ const chainingPromises = ListSlideMaker(
   ],
 );
 
-const chainingRepl = ReplFrameSlide(
-  'https://repl.it/student_embed/assignment/1129363/0cbafc25aa4f659c9385fe14d3525706',
-);
+const chainingRepl = ReplFrameSlide(PROMISES.fetchExercise);
 
 export const PromisesSlideSet = [
   whatIsAPromiseGoodFor,
