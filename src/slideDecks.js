@@ -17,6 +17,7 @@ import {
   reactPropsSlideSet,
   lifecycleSlideSet,
   reactStateSlideSet,
+  reactHooksSlideSet,
   reduxIntroSet,
   reduxThunksIntroSet,
   unitTestingIntroSet,
@@ -58,6 +59,7 @@ const reactSlideList = [
   ...classComponentSlideSet,
   ...lifecycleSlideSet,
   ...reactStateSlideSet,
+  ...reactHooksSlideSet,
 ];
 
 // REDUX
