@@ -1,6 +1,8 @@
 import React from 'react';
 import { Slide, Heading, Text, List, ListItem, Link } from 'spectacle';
-import { ListSlideMaker } from '../../tools';
+
+import lifecycleMethodsIllustration from './react-lifecycle-methods.png';
+import { ListSlideMaker, IllustrationSlide } from '../../tools';
 
 class OverviewSlide extends React.Component {
   render() {
@@ -72,6 +74,8 @@ const DeprecatedSlide = ListSlideMaker(`Deprecated Events`, [
   `componentWillRecieveProps`,
 ]);
 
+const LifecycleIllustrationSlide = IllustrationSlide(lifecycleMethodsIllustration);
+
 class ResourcesSlide extends React.Component {
   render() {
     return (
@@ -104,5 +108,6 @@ export const lifecycleSlideSet = [
   UnmountSlide,
   WillUnmountSlide,
   DeprecatedSlide,
+  LifecycleIllustrationSlide,
   ResourcesSlide,
 ];
