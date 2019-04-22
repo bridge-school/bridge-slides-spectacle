@@ -16,6 +16,7 @@ export * from './react-components-intro/components-intro';
 export * from './react-function-component/function-component';
 export * from './react-class-component/class-component';
 export * from './react-props/props';
+export * from './react-hooks/hooks';
 export * from './react-component-lifecycle/lifecycle';
 export * from './react-state/react-state';
 export * from './redux-intro/redux-intro';
