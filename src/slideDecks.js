@@ -57,8 +57,8 @@ const reactSlideList = [
   ...functionComponentSlideSet,
   ...reactPropsSlideSet,
   ...classComponentSlideSet,
-  ...lifecycleSlideSet,
   ...reactStateSlideSet,
+  ...lifecycleSlideSet,
   ...reactHooksSlideSet,
 ];
 
