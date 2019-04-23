@@ -11,10 +11,9 @@ import * as stateExample4 from "!raw-loader!./state-4.example";
 
 const Slide1 = ListSlideMaker(
   `React State`,
-  [`While React Props are available in both function components and class components, 'state' can only exist on a class component`,
-  `In class components, you have the opportunity to control when and how your component re-renders`,
-  `This combines with the ability to store state in your component (which you cannot do in function components, aka, stateless components)`,
-  `What this means is that there is a keyword property, 'state', that you can interact with in your class component`]
+  [`While React Props are available in both function components and class components, class components can also hold 'state'`,
+  `Similarly to props, which are accessible using 'this.props', state can be accessed using 'this.state'`,
+  `Unlike props, which are passed in from a parent component, state lives inside the component`]
 );
 
 const Slide2 = BasicCodeSlideMaker(stateExample1, 20);
