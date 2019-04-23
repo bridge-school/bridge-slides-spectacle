@@ -11,8 +11,8 @@ import * as stateExample4 from "!raw-loader!./state-4.example";
 
 const Slide1 = ListSlideMaker(
   `React State`,
-  [`While React Props are available in both function components and class components, class components can also hold 'state'`,
-  `Similarly to props, which are accessible using 'this.props', state can be accessed using 'this.state'`,
+  [`While function components and class components both take in props, they have different approaches to managing state`,
+  `Similarly to props, which are accessible using 'this.props', state in class components can be accessed using 'this.state'`,
   `Unlike props, which are passed in from a parent component, state lives inside the component`]
 );
 
