@@ -8,7 +8,7 @@ function addNumbers(number1, number2 = 8) {
 // Without a second argument, number2 is set to 8
 const total = addNumbers(5); // resolves to 13
 
-// we can also use the spread operator (...) in the parameter definition
+// we can also use the rest operator (...) in the parameter definition
 // this will take all arguments passed in and put them into a single array
 function keepTheLastItem(...items) {
   return items[items.length - 1];
