@@ -15,7 +15,7 @@ const Slide1 = ListSlideMaker(
     More on classes
   </Link>,
   `They are more complex than function components, and require more boilerplate`,
-  `They introduce the idea of lifecycle hooks - which are methods that fire at certain points in a class components life, and you can 'tap into'`]
+  `They introduce the idea of lifecycle methods - which are methods that fire at certain points in a class components life, and you can 'tap into'`]
 );
 
 const Slide2 = BasicCodeSlideMaker(classComponent1);
@@ -24,7 +24,7 @@ const Slide3 = ListSlideMaker(
   `React Components - Class`,
   [`The render method on a class is where we define what the UI of the component will be`,
   `What gets returned in a render method should be either a single parent element (with as many children as you want) or an array of elements`,
-  `Class components generally re-render when their state or props change, but you can prevent a re-render by tying into some lifecycle hooks`]
+  `Class components generally re-render when their state or props change, but you can prevent a re-render by tying into some lifecycle methods`]
 );
 
 const Slide4 = ReplFrameSlide(

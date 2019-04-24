@@ -71,7 +71,7 @@ const WillUnmountSlide = ListSlideMaker(`componentWillUnmount ()`, [
 const DeprecatedSlide = ListSlideMaker(`Deprecated Events`, [
   `componentWillMount`,
   `componentWillUpdate`,
-  `componentWillRecieveProps`,
+  `componentWillReceiveProps`,
 ]);
 
 const LifecycleIllustrationSlide = IllustrationSlide(lifecycleMethodsIllustration);

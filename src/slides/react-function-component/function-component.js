@@ -18,9 +18,9 @@ const Slide2 = BasicCodeSlideMaker(functionComponent1);
 
 const Slide3 = ListSlideMaker(
   `React Components - Function`,
-  [`They're simpler than class components, but also do less`,
-  `They do not have any lifecycle methods, like class components`,
-  `They re-render whenever their parents change, and you can't really prevent that unlike with class components`]
+  [`They're often simpler than class components, but just as powerful`,
+  `They do not have any lifecycle methods, unlike class components`,
+  `Instead of lifecycle methods, function components can use hooks`]
 );
 
 const Slide4 = ReplFrameSlide(
